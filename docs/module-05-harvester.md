@@ -27,27 +27,7 @@ Harvester is an **open-source, cloud-native HCI platform** built entirely on Kub
 
 The Harvester stack is layered from bare metal upward:
 
-```
-┌──────────────────────────────────────────────┐
-│             Harvester Dashboard              │
-│           (kubectl / Rancher UI)             │
-├──────────────────────────────────────────────┤
-│           KubeVirt (VM runtime)              │
-│   VM CRDs → libvirt → KVM (QEMU/KVM)        │
-├──────────────────────────────────────────────┤
-│   Longhorn (distributed block storage)       │
-│   CSI driver → replication → snapshots      │
-├──────────────────────────────────────────────┤
-│         Kubernetes (upstream K8s)            │
-│   Scheduling, networking (CNI), RBAC         │
-├──────────────────────────────────────────────┤
-│    Elemental / SLE Micro (atomic OS)        │
-│   Immutable, container-optimized host OS    │
-├──────────────────────────────────────────────┤
-│              Bare Metal / Server             │
-│   x86_64, aarch64, NVMe, HDD, GPU, NIC      │
-└──────────────────────────────────────────────┘
-```
+![Harvester Stack](assets/images/harvester-stack.svg)
 
 ### Layer Breakdown
 
@@ -177,14 +157,7 @@ Harvester + Rancher Prime form SUSE's **complete VMware off-ramp** — a path to
 
 ### The Migration Narrative
 
-```
-Phase 1: Coexistence           Phase 2: Consolidation        Phase 3: Full Exit
-┌─────────────────────┐        ┌─────────────────────┐       ┌─────────────────────┐
-│ VMware + Harvester  │  ──►   │ Harvester primary   │  ──►  │ Harvester only      │
-│ Rancher manages     │        │ VMware decomm       │       │ Rancher unified mgmt│
-│ both environments   │        │ VM migration window │       │ Container-native    │
-└─────────────────────┘        └─────────────────────┘       └─────────────────────┘
-```
+![VMware Migration](assets/images/vmware-migration.svg)
 
 ### Migration Tooling
 

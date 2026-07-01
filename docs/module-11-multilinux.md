@@ -84,26 +84,7 @@ SUSE MultiLinux Manager (based on SUSE Manager) is an enterprise Linux lifecycle
 
 ### Architecture at a Glance
 
-```
-┌───────────────────────────────────────────────────────────────────┐
-│                   SUSE MultiLinux Manager                          │
-│                                                                   │
-│  ┌─────────────────────────────────────────────────────────────┐  │
-│  │                 Management Server (Hub)                       │  │
-│  │  - Web UI, API, database                                      │  │
-│  │  - Patch repository mirroring (SUSE, RHEL, Ubuntu repos)     │  │
-│  │  - Compliance scanning engine                                 │  │
-│  │  - Configuration management (Salt)                            │  │
-│  └─────────────────────────────────────────────────────────────┘  │
-│           │                 │                 │                    │
-│           ▼                 ▼                 ▼                    │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
-│  │   SLE        │  │   RHEL       │  │   Ubuntu     │             │
-│  │   Managed    │  │   Managed    │  │   Managed    │             │
-│  │   Systems    │  │   Systems    │  │   Systems    │             │
-│  └──────────────┘  └──────────────┘  └──────────────┘             │
-└───────────────────────────────────────────────────────────────────┘
-```
+![SUSE MultiLinux Manager Architecture](assets/images/multilinux-arch.svg)
 
 ### Competitive Comparison
 

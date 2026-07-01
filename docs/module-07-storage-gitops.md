@@ -236,39 +236,7 @@ Longhorn is well-suited for [edge deployments](module-06-edge.md) due to:
 
 Fleet uses a **hub-and-spoke** model with CRDs as the primary interface:
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                     Rancher Prime (Hub)                             │
-│                                                                     │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    Fleet Controller                          │   │
-│  │  - Watches GitRepo, Bundle, ClusterGroup CRDs               │   │
-│  │  - Generates BundleDeployments per target cluster           │   │
-│  │  - Manages drift detection and reconciliation               │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                           │                                         │
-│                           ▼                                         │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                  Git Repository (source)                    │   │
-│  │  ┌──────────────────────────────────────────────────────┐   │   │
-│  │  │  apps/                                               │   │   │
-│  │  │    ├── database/  (Helm chart)                       │   │   │
-│  │  │    ├── webapp/     (Kustomize overlay)               │   │   │
-│  │  │    └── config/     (raw YAML)                        │   │   │
-│  │  └──────────────────────────────────────────────────────┘   │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────┘
-         │                    │                    │
-         ▼                    ▼                    ▼
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│  Cluster A      │  │  Cluster B      │  │  Cluster C      │
-│  (RKE2, prod)   │  │  (K3s, staging) │  │  (AKS, dev)     │
-├─────────────────┤  ├─────────────────┤  ├─────────────────┤
-│ Fleet Agent     │  │ Fleet Agent     │  │ Fleet Agent     │
-│ BundleDeploy    │  │ BundleDeploy    │  │ BundleDeploy    │
-│ → Deploy apps   │  │ → Deploy apps   │  │ → Deploy apps   │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-```
+![Fleet GitOps Architecture](assets/images/fleet-hub-spoke.svg)
 
 | Fleet CRD | Purpose |
 |---|---|
@@ -380,28 +348,7 @@ The **SUSE Private Registry** (Early Access) is a **Harbor-powered** container i
 
 ### Air-Gap Architecture
 
-```
-┌─────────────────────────────────┐     ┌─────────────────────────────────┐
-│    Internet (Upstream)          │     │     Air-Gapped Environment      │
-│                                 │     │                                 │
-│  Docker Hub                     │     │  ┌─────────────────────────┐   │
-│  quay.io                        │     │  │  SUSE Private Registry  │   │
-│  gcr.io                         │     │  │  (Harbor)               │   │
-│  SUSE Registry                  │     │  │                         │   │
-│       │                         │     │  │  - Rancher images       │   │
-│       │ (one-time sync)         │     │  │  - Longhorn images      │   │
-│       ▼                         │     │  │  - Kubewarden WASM      │   │
-│  ┌──────────────────────┐       │     │  │  - Customer app images  │   │
-│  │  Internet-connected   │       │     │  └─────────────────────────┘   │
-│  │  Harbor (staging)     │──sync─►    │         │                       │
-│  │  - Pull all required  │             │         ▼                       │
-│  │    images              │             │  ┌─────────────────────────┐   │
-│  └──────────────────────┘             │  │  Clusters (RKE2/K3s)    │   │
-│                                       │  │  - Pull images from     │   │
-│                                       │  │    local Harbor          │   │
-│                                       │  └─────────────────────────┘   │
-└─────────────────────────────────┘     └─────────────────────────────────┘
-```
+![Air-Gapped Architecture](assets/images/airgap-architecture.svg)
 
 !!! tip "Air-Gap Strategy"
     The SUSE Private Registry is the **cornerstone of air-gapped deployments**. All SUSE Cloud Native components — Rancher Prime, Longhorn, NeuVector, Kubewarden — are available as OCI images that can be mirrored once into a local Harbor instance. After the initial sync, no internet access is required for cluster operations.

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 520" width="850" height="520">
+  <defs>
+    <marker id="arrow-right" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#009688"/>
+    </marker>
+    <marker id="arrow-right-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF5722"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#009688"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="850" height="520" fill="#FFFFFF" rx="0"/>
+
+  <!-- Title -->
+  <text x="425" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">Air-Gapped Deployment Architecture</text>
+
+  <!-- ===== LEFT SIDE: Internet (Upstream) ===== -->
+  <rect x="18" y="55" width="340" height="420" rx="10" ry="10" fill="#FFFFFF" stroke="#9E9E9E" stroke-width="2"/>
+
+  <!-- Section header -->
+  <rect x="18" y="55" width="340" height="32" rx="10" ry="10" fill="#9E9E9E"/>
+  <rect x="18" y="77" width="340" height="10" fill="#9E9E9E"/>
+  <text x="188" y="76" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Internet (Upstream)</text>
+
+  <!-- Source registries -->
+  <text x="188" y="108" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#555">Container Image Sources</text>
+
+  <rect x="38" y="118" width="145" height="38" rx="6" ry="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="1.5"/>
+  <text x="110" y="135" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1565C0">Docker Hub</text>
+  <text x="110" y="150" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">docker.io</text>
+
+  <rect x="193" y="118" width="145" height="38" rx="6" ry="6" fill="#FFF3E0" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="265" y="135" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E65100">quay.io</text>
+  <text x="265" y="150" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Red Hat</text>
+
+  <rect x="38" y="166" width="145" height="38" rx="6" ry="6" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1.5"/>
+  <text x="110" y="183" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6A1B9A">gcr.io</text>
+  <text x="110" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Google</text>
+
+  <rect x="193" y="166" width="145" height="38" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="265" y="183" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#009688">SUSE Registry</text>
+  <text x="265" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">registry.suse.com</text>
+
+  <!-- Arrow to staging -->
+  <path d="M 188,215 L 188,242" fill="none" stroke="#009688" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- Internet-connected Harbor (staging) -->
+  <rect x="53" y="250" width="270" height="90" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="2"/>
+  <rect x="53" y="250" width="270" height="30" rx="8" ry="8" fill="#009688"/>
+  <rect x="53" y="270" width="270" height="10" fill="#009688"/>
+  <text x="188" y="269" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Internet-connected Harbor (staging)</text>
+
+  <text x="188" y="296" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">Pull from upstream registries</text>
+  <text x="188" y="312" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">Stage &amp; scan all images</text>
+  <text x="188" y="328" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">Package for air-gap transfer</text>
+
+  <!-- One-time sync arrow -->
+  <rect x="108" y="348" width="160" height="36" rx="18" ry="18" fill="#FFF3E0" stroke="#FF5722" stroke-width="2"/>
+  <text x="188" y="364" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E65100">one-time sync</text>
+  <text x="188" y="380" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">(physical media or VPN)</text>
+
+  <!-- Arrow across air gap -->
+  <path d="M 188,395 L 188,410" fill="none" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrow-right-orange)"/>
+
+  <!-- ===== DASHED VERTICAL LINE: Air Gap ===== -->
+  <line x1="370" y1="40" x2="370" y2="480" stroke="#555" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <rect x="350" y="220" width="40" height="22" rx="4" ry="4" fill="#555"/>
+  <text x="370" y="235" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">AIR</text>
+  <text x="370" y="248" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#555">GAP</text>
+
+  <!-- ===== RIGHT SIDE: Air-Gapped Environment ===== -->
+  <rect x="400" y="55" width="430" height="420" rx="10" ry="10" fill="#F5F5F5" stroke="#009688" stroke-width="2"/>
+
+  <!-- Section header -->
+  <rect x="400" y="55" width="430" height="32" rx="10" ry="10" fill="#009688"/>
+  <rect x="400" y="77" width="430" height="10" fill="#009688"/>
+  <text x="615" y="76" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Air-Gapped Environment (Private Network)</text>
+
+  <!-- SUSE Private Registry (Harbor) -->
+  <rect x="420" y="100" width="390" height="200" rx="10" ry="10" fill="#FFFFFF" stroke="#009688" stroke-width="2"/>
+  <rect x="420" y="100" width="390" height="34" rx="10" ry="10" fill="#009688"/>
+  <rect x="420" y="124" width="390" height="10" fill="#009688"/>
+  <text x="615" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">SUSE Private Registry (Harbor)</text>
+
+  <!-- Image categories -->
+  <rect x="438" y="145" width="170" height="38" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="523" y="162" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#009688">Rancher Images</text>
+  <text x="523" y="177" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Fleet · Cluster API · UI</text>
+
+  <rect x="618" y="145" width="174" height="38" rx="6" ry="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="1.5"/>
+  <text x="705" y="162" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1565C0">Longhorn Images</text>
+  <text x="705" y="177" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Block storage · Replicas</text>
+
+  <rect x="438" y="193" width="170" height="38" rx="6" ry="6" fill="#FFF3E0" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="523" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E65100">Kubewarden WASM</text>
+  <text x="523" y="225" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Policy engine · Artifact Hub</text>
+
+  <rect x="618" y="193" width="174" height="38" rx="6" ry="6" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1.5"/>
+  <text x="705" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#6A1B9A">Customer App Images</text>
+  <text x="705" y="225" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Microservices · Sidecars</text>
+
+  <!-- OS images line -->
+  <rect x="438" y="242" width="354" height="38" rx="6" ry="6" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
+  <text x="615" y="259" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2E7D32">Elemental OS Images (SL Micro + K3s bundles)</text>
+  <text x="615" y="274" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">OCI-based, versioned, signed</text>
+
+  <!-- Arrow: Registry → Clusters -->
+  <path d="M 615,305 L 615,335" fill="none" stroke="#009688" stroke-width="2.5" marker-end="url(#arrow-down)"/>
+
+  <!-- Clusters (RKE2/K3s) -->
+  <rect x="420" y="340" width="390" height="90" rx="10" ry="10" fill="#FFFFFF" stroke="#009688" stroke-width="2"/>
+  <rect x="420" y="340" width="390" height="32" rx="10" ry="10" fill="#009688"/>
+  <rect x="420" y="362" width="390" height="10" fill="#009688"/>
+  <text x="615" y="360" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Clusters (RKE2 / K3s)</text>
+
+  <text x="615" y="385" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">Pull container images from local Harbor only</text>
+  <text x="615" y="402" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">No direct internet access — all registry traffic internal</text>
+  <text x="615" y="420" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">Containerd / CRI-O configured with local Harbor mirror</text>
+
+  <!-- Bottom note -->
+  <rect x="440" y="445" width="350" height="28" rx="14" ry="14" fill="#FFF3E0" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="615" y="464" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E65100">⚠ No internet access required after initial sync</text>
+</svg>

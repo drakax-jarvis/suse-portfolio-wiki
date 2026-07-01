@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" font-family="Arial, sans-serif">
+  <rect width="700" height="380" fill="#FAFAFA" rx="8"/>
+
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SUSE Portfolio — Quick Reference Architecture</text>
+
+  <!-- Rancher Prime -->
+  <rect x="225" y="40" width="250" height="40" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="350" y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Rancher Prime</text>
+  <text x="350" y="71" text-anchor="middle" font-size="9" fill="#E0F2F1">Multi-Cluster Mgmt · Fleet · OCI Registry</text>
+
+  <line x1="350" y1="80" x2="350" y2="92" stroke="#009688" stroke-width="2"/>
+
+  <!-- Row 1: RKE2, K3s, Harvester -->
+  <rect x="45" y="95" width="180" height="45" rx="5" fill="#00796B" stroke="#00695C" stroke-width="2"/>
+  <text x="135" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">RKE2 (Prod)</text>
+  <text x="135" y="130" text-anchor="middle" font-size="9" fill="#E0F2F1">FIPS · CIS · SAP Certified</text>
+
+  <rect x="260" y="95" width="180" height="45" rx="5" fill="#00796B" stroke="#00695C" stroke-width="2"/>
+  <text x="350" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">K3s (Edge)</text>
+  <text x="350" y="130" text-anchor="middle" font-size="9" fill="#E0F2F1">&lt;100 MB · ARM64 · Air-Gap</text>
+
+  <rect x="475" y="95" width="180" height="45" rx="5" fill="#00796B" stroke="#00695C" stroke-width="2"/>
+  <text x="565" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Harvester (VM)</text>
+  <text x="565" y="130" text-anchor="middle" font-size="9" fill="#E0F2F1">KubeVirt · 3x Density</text>
+
+  <line x1="135" y1="80" x2="135" y2="92" stroke="#009688" stroke-width="2"/>
+  <line x1="565" y1="80" x2="565" y2="92" stroke="#009688" stroke-width="2"/>
+
+  <!-- Row 2: NeuVector, Longhorn, Kubewarden -->
+  <rect x="45" y="155" width="180" height="45" rx="5" fill="#FF5722" stroke="#E64A19" stroke-width="2"/>
+  <text x="135" y="175" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">NeuVector</text>
+  <text x="135" y="190" text-anchor="middle" font-size="9" fill="#FFE0B2">Security · Zero-Trust · DLP/WAF</text>
+
+  <rect x="260" y="155" width="180" height="45" rx="5" fill="#00796B" stroke="#00695C" stroke-width="2"/>
+  <text x="350" y="175" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Longhorn</text>
+  <text x="350" y="190" text-anchor="middle" font-size="9" fill="#E0F2F1">Storage · Replication · NVMe-oF</text>
+
+  <rect x="475" y="155" width="180" height="45" rx="5" fill="#00796B" stroke="#00695C" stroke-width="2"/>
+  <text x="565" y="175" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Kubewarden</text>
+  <text x="565" y="190" text-anchor="middle" font-size="9" fill="#E0F2F1">Policy · WebAssembly · OCI</text>
+
+  <!-- Elemental bridge -->
+  <rect x="225" y="215" width="250" height="35" rx="5" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="350" y="237" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Elemental (OS Lifecycle)</text>
+
+  <!-- Infrastructure -->
+  <rect x="45" y="265" width="610" height="40" rx="5" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="2"/>
+  <text x="350" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="#616161">SLE / SLE Micro · Public Cloud · Bare Metal · Edge HW</text>
+
+  <!-- Strategic -->
+  <rect x="45" y="315" width="610" height="50" rx="5" fill="#FFF3E0" stroke="#FF5722" stroke-width="2"/>
+  <text x="350" y="335" text-anchor="middle" font-size="12" font-weight="bold" fill="#E64A19">SUSE Edge 4.0 · SUSE AI · SAP/Temenos · MultiLinux</text>
+  <text x="350" y="352" text-anchor="middle" font-size="10" fill="#616161">One subscription · One SLA · 100% open source · No lock-in</text>
+</svg>

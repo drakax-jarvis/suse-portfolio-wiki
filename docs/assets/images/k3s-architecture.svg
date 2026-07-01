@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 510" width="720" height="510">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- White background -->
+  <rect width="720" height="510" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="16" font-weight="bold">K3s Architecture — Server Node &amp; Agent Node</text>
+
+  <!-- ============================================================ -->
+  <!-- K3s SERVER BOX (left side) -->
+  <!-- ============================================================ -->
+  <rect x="15" y="50" width="335" height="445" rx="8" fill="#e0f2f1" stroke="#009688" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="15" y="50" width="335" height="32" rx="8" fill="#009688"/>
+  <rect x="15" y="66" width="335" height="16" fill="#009688"/>
+  <text x="182" y="72" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">K3s SERVER</text>
+
+  <!-- k3s server single binary box -->
+  <rect x="30" y="95" width="305" height="200" rx="6" fill="#ffffff" stroke="#009688" stroke-width="2"/>
+  <text x="182" y="115" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="11" font-weight="bold">k3s server (single binary)</text>
+
+  <!-- Internal: kube-apiserver, scheduler, controller-mgr -->
+  <rect x="45" y="128" width="275" height="36" rx="4" fill="#f5fffd" stroke="#009688" stroke-width="1"/>
+  <text x="182" y="151" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11">kube-apiserver</text>
+
+  <rect x="45" y="170" width="275" height="36" rx="4" fill="#f5fffd" stroke="#009688" stroke-width="1"/>
+  <text x="182" y="193" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11">kube-scheduler</text>
+
+  <rect x="45" y="212" width="275" height="36" rx="4" fill="#f5fffd" stroke="#009688" stroke-width="1"/>
+  <text x="182" y="235" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11">kube-controller-manager</text>
+
+  <!-- Arrow down to datastore -->
+  <line x1="182" y1="248" x2="182" y2="268" stroke="#9E9E9E" stroke-width="1.5"/>
+  <polygon points="182,268 177,260 187,260" fill="#9E9E9E"/>
+
+  <!-- Embedded datastore box -->
+  <rect x="45" y="274" width="275" height="40" rx="4" fill="#fff3e0" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="182" y="291" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Embedded Datastore</text>
+  <text x="182" y="306" text-anchor="middle" fill="#E65100" font-family="Arial, sans-serif" font-size="10">etcd (HA)  OR  SQLite3 (default, single-node)</text>
+
+  <!-- Arrow down to kubelet/kube-proxy -->
+  <line x1="182" y1="295" x2="182" y2="310" stroke="#9E9E9E" stroke-width="1.5"/>
+
+  <!-- kubelet -->
+  <rect x="30" y="310" width="145" height="36" rx="4" fill="#ffffff" stroke="#009688" stroke-width="1.5"/>
+  <text x="102" y="333" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">kubelet</text>
+
+  <!-- kube-proxy -->
+  <rect x="190" y="310" width="145" height="36" rx="4" fill="#ffffff" stroke="#009688" stroke-width="1.5"/>
+  <text x="262" y="333" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">kube-proxy</text>
+
+  <!-- Arrow → containerd -->
+  <line x1="102" y1="346" x2="102" y2="366" stroke="#9E9E9E" stroke-width="1.5"/>
+  <line x1="262" y1="346" x2="262" y2="366" stroke="#9E9E9E" stroke-width="1.5"/>
+  <polygon points="102,366 97,358 107,358" fill="#9E9E9E"/>
+  <polygon points="262,366 257,358 267,358" fill="#9E9E9E"/>
+
+  <!-- containerd -->
+  <rect x="30" y="372" width="305" height="36" rx="4" fill="#ffffff" stroke="#009688" stroke-width="2"/>
+  <text x="182" y="395" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">containerd</text>
+
+  <!-- Arrow → Pods -->
+  <line x1="182" y1="408" x2="182" y2="425" stroke="#9E9E9E" stroke-width="1.5"/>
+  <polygon points="182,425 177,417 187,417" fill="#9E9E9E"/>
+
+  <!-- Pods -->
+  <rect x="30" y="430" width="305" height="48" rx="4" fill="#ffffff" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="182" y="452" text-anchor="middle" fill="#616161" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Pods / Containers</text>
+  <text x="182" y="468" text-anchor="middle" fill="#9E9E9E" font-family="Arial, sans-serif" font-size="9">Application workloads</text>
+
+
+  <!-- ============================================================ -->
+  <!-- K3s AGENT BOX (right side) -->
+  <!-- ============================================================ -->
+  <rect x="370" y="50" width="335" height="445" rx="8" fill="#f5f5f5" stroke="#00796B" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="50" width="335" height="32" rx="8" fill="#00796B"/>
+  <rect x="370" y="66" width="335" height="16" fill="#00796B"/>
+  <text x="537" y="72" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">K3s AGENT</text>
+
+  <!-- kubelet (with tunnel) -->
+  <rect x="385" y="100" width="145" height="52" rx="4" fill="#ffffff" stroke="#00796B" stroke-width="1.5"/>
+  <text x="457" y="120" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">kubelet</text>
+  <rect x="405" y="127" width="105" height="16" rx="3" fill="#fff3e0" stroke="#FF5722" stroke-width="1"/>
+  <text x="457" y="139" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="9" font-weight="bold">tunnel</text>
+
+  <!-- kube-proxy -->
+  <rect x="545" y="100" width="145" height="52" rx="4" fill="#ffffff" stroke="#00796B" stroke-width="1.5"/>
+  <text x="617" y="133" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">kube-proxy</text>
+
+  <!-- Arrow → containerd -->
+  <line x1="457" y1="152" x2="457" y2="175" stroke="#9E9E9E" stroke-width="1.5"/>
+  <line x1="617" y1="152" x2="617" y2="175" stroke="#9E9E9E" stroke-width="1.5"/>
+  <polygon points="457,175 452,167 462,167" fill="#9E9E9E"/>
+  <polygon points="617,175 612,167 622,167" fill="#9E9E9E"/>
+
+  <!-- containerd -->
+  <rect x="385" y="180" width="305" height="36" rx="4" fill="#ffffff" stroke="#00796B" stroke-width="2"/>
+  <text x="537" y="203" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">containerd</text>
+
+  <!-- Arrow → Pods -->
+  <line x1="537" y1="216" x2="537" y2="235" stroke="#9E9E9E" stroke-width="1.5"/>
+  <polygon points="537,235 532,227 542,227" fill="#9E9E9E"/>
+
+  <!-- Pods -->
+  <rect x="385" y="240" width="305" height="48" rx="4" fill="#ffffff" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="537" y="262" text-anchor="middle" fill="#616161" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Pods / Containers</text>
+  <text x="537" y="278" text-anchor="middle" fill="#9E9E9E" font-family="Arial, sans-serif" font-size="9">Application workloads</text>
+
+  <!-- Empty space in agent side showing what agent doesn't have -->
+  <rect x="385" y="300" width="305" height="80" rx="4" fill="#fafafa" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="537" y="330" text-anchor="middle" fill="#BDBDBD" font-family="Arial, sans-serif" font-size="10" font-style="italic">No control-plane components here</text>
+  <text x="537" y="350" text-anchor="middle" fill="#BDBDBD" font-family="Arial, sans-serif" font-size="10" font-style="italic">Agents connect to Server for API</text>
+
+  <!-- Legend -->
+  <rect x="155" y="478" width="12" height="12" rx="2" fill="#009688"/>
+  <text x="173" y="489" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="10">K3s Server node</text>
+  <rect x="340" y="478" width="12" height="12" rx="2" fill="#00796B"/>
+  <text x="358" y="489" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="10">K3s Agent node</text>
+  <rect x="490" y="478" width="12" height="12" rx="2" fill="#FF5722"/>
+  <text x="508" y="489" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="10">Tunnel proxy / SQLite3</text>
+
+</svg>

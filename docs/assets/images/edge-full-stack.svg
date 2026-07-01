@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" width="700" height="520">
+  <defs>
+    <linearGradient id="layer-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E0F2F1;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="hw-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="520" fill="#FFFFFF" rx="0"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">SUSE Edge — Full Stack Architecture</text>
+
+  <!-- ===== Layer 1: Rancher Prime ===== -->
+  <rect x="30" y="52" width="500" height="82" rx="8" ry="8" fill="url(#layer-grad)" stroke="#009688" stroke-width="2"/>
+  <rect x="30" y="52" width="500" height="32" rx="8" ry="8" fill="#009688"/>
+  <rect x="30" y="74" width="500" height="10" fill="#009688"/>
+  <text x="280" y="73" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Layer 1 — Rancher Prime</text>
+
+  <rect x="48" y="92" width="110" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="103" y="111" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Fleet Management</text>
+
+  <rect x="170" y="92" width="100" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="220" y="111" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">RBAC</text>
+
+  <rect x="282" y="92" width="120" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="342" y="111" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Observability</text>
+
+  <rect x="414" y="92" width="100" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="464" y="111" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">GitOps</text>
+
+  <!-- ===== Layer 2: K3s ===== -->
+  <rect x="30" y="144" width="500" height="82" rx="8" ry="8" fill="url(#layer-grad)" stroke="#009688" stroke-width="2"/>
+  <rect x="30" y="144" width="500" height="32" rx="8" ry="8" fill="#009688"/>
+  <rect x="30" y="166" width="500" height="10" fill="#009688"/>
+  <text x="280" y="165" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Layer 2 — K3s</text>
+
+  <rect x="48" y="184" width="145" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="120" y="203" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Lightweight Kubernetes</text>
+
+  <rect x="205" y="184" width="140" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="275" y="203" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Edge-optimized</text>
+
+  <rect x="357" y="184" width="155" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="434" y="203" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Embedded etcd/SQLite</text>
+
+  <!-- ===== Layer 3: SUSE Linux Micro ===== -->
+  <rect x="30" y="236" width="500" height="82" rx="8" ry="8" fill="url(#layer-grad)" stroke="#009688" stroke-width="2"/>
+  <rect x="30" y="236" width="500" height="32" rx="8" ry="8" fill="#009688"/>
+  <rect x="30" y="258" width="500" height="10" fill="#009688"/>
+  <text x="280" y="257" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Layer 3 — SUSE Linux Micro</text>
+
+  <rect x="48" y="276" width="130" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="113" y="295" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Immutable OS</text>
+
+  <rect x="190" y="276" width="150" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="265" y="295" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Transactional Updates</text>
+
+  <rect x="352" y="276" width="160" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="432" y="295" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Minimal Attack Surface</text>
+
+  <!-- ===== Layer 4: Elemental ===== -->
+  <rect x="30" y="328" width="500" height="82" rx="8" ry="8" fill="url(#layer-grad)" stroke="#009688" stroke-width="2"/>
+  <rect x="30" y="328" width="500" height="32" rx="8" ry="8" fill="#009688"/>
+  <rect x="30" y="350" width="500" height="10" fill="#009688"/>
+  <text x="280" y="349" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Layer 4 — Elemental</text>
+
+  <rect x="48" y="368" width="145" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="120" y="387" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">OCI-based OS Lifecycle</text>
+
+  <rect x="205" y="368" width="155" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="282" y="387" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Fleet OS Management</text>
+
+  <rect x="372" y="368" width="140" height="30" rx="6" ry="6" fill="#FFFFFF" stroke="#009688" stroke-width="1"/>
+  <text x="442" y="387" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#009688">Rollback Support</text>
+
+  <!-- ===== Hardware Layer ===== -->
+  <rect x="30" y="420" width="500" height="55" rx="8" ry="8" fill="url(#hw-grad)" stroke="#9E9E9E" stroke-width="2"/>
+  <rect x="30" y="420" width="500" height="26" rx="8" ry="8" fill="#9E9E9E"/>
+  <rect x="30" y="438" width="500" height="8" fill="#9E9E9E"/>
+  <text x="280" y="438" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Hardware Layer</text>
+
+  <text x="280" y="460" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">x86  ·  ARM  ·  Industrial Gateways  ·  Raspberry Pi  ·  Embedded Systems</text>
+
+  <!-- ===== Right side callout ===== -->
+  <rect x="545" y="140" width="140" height="90" rx="8" ry="8" fill="#FFF3E0" stroke="#FF5722" stroke-width="2"/>
+  <text x="615" y="162" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E65100">Minimum Spec</text>
+  <text x="615" y="182" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">~512 MB RAM</text>
+  <text x="615" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">~4 GB disk</text>
+  <text x="615" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">for base stack</text>
+
+  <!-- Callout connector line -->
+  <line x1="530" y1="185" x2="545" y2="185" stroke="#FF5722" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Stack arrows (between layers) -->
+  <line x1="280" y1="134" x2="280" y2="144" stroke="#009688" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+  <line x1="280" y1="226" x2="280" y2="236" stroke="#009688" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+  <line x1="280" y1="318" x2="280" y2="328" stroke="#009688" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+
+  <defs>
+    <marker id="arrow-down" markerWidth="7" markerHeight="10" refX="3.5" refY="10" orient="auto">
+      <polygon points="0 0, 3.5 10, 7 0" fill="#009688"/>
+    </marker>
+  </defs>
+</svg>

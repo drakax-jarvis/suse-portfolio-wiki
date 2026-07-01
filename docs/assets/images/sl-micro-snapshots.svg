@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <marker id="arrow-curve" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#009688"/>
+    </marker>
+    <linearGradient id="snap1-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F2F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="snap2-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#FFFFFF" rx="0"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">SL Micro Transactional Update — Snapshot Model</text>
+
+  <!-- ===== Snapshot 1 (active) ===== -->
+  <rect x="40" y="60" width="310" height="340" rx="10" ry="10" fill="url(#snap1-grad)" stroke="#009688" stroke-width="2.5"/>
+  <rect x="40" y="60" width="310" height="40" rx="10" ry="10" fill="#009688"/>
+  <rect x="40" y="90" width="310" height="10" fill="#009688"/>
+  <text x="195" y="86" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Snapshot 1 (active)</text>
+
+  <!-- Mount points inside Snapshot 1 -->
+  <rect x="60" y="115" width="270" height="36" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="75" y="138" font-family="monospace" font-size="12" font-weight="bold" fill="#009688">/</text>
+  <text x="95" y="138" font-family="sans-serif" font-size="12" fill="#555">read-only (base squashfs)</text>
+
+  <rect x="60" y="160" width="270" height="36" rx="6" ry="6" fill="#FFF8E1" stroke="#FF9800" stroke-width="1.5"/>
+  <text x="75" y="183" font-family="monospace" font-size="12" font-weight="bold" fill="#E65100">/etc</text>
+  <text x="95" y="183" font-family="sans-serif" font-size="12" fill="#555">rw overlay (upperdir)</text>
+
+  <rect x="60" y="205" width="270" height="36" rx="6" ry="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="1.5"/>
+  <text x="75" y="228" font-family="monospace" font-size="12" font-weight="bold" fill="#1565C0">/var</text>
+  <text x="95" y="228" font-family="sans-serif" font-size="12" fill="#555">persistent read-write</text>
+
+  <rect x="60" y="250" width="270" height="36" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="75" y="273" font-family="monospace" font-size="12" font-weight="bold" fill="#009688">/usr</text>
+  <text x="95" y="273" font-family="sans-serif" font-size="12" fill="#555">read-only (squashfs)</text>
+
+  <!-- Status badge -->
+  <rect x="130" y="305" width="140" height="28" rx="14" ry="14" fill="#009688"/>
+  <text x="200" y="324" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">● Currently booted</text>
+
+  <!-- Current snapshot filesystem info -->
+  <text x="195" y="360" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">snapshot=20250628-1</text>
+  <text x="195" y="376" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">subvol=@/.snapshots/1/snapshot</text>
+
+  <!-- ===== Curved arrow between snapshots ===== -->
+  <path d="M 355,160 Q 400,140 440,200 Q 470,260 450,310" fill="none" stroke="#009688" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrow-curve)"/>
+  <text x="412" y="235" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#009688" transform="rotate(-55, 412, 235)">Reboot to activate</text>
+
+  <!-- ===== Snapshot 2 (new) ===== -->
+  <rect x="450" y="60" width="310" height="340" rx="10" ry="10" fill="url(#snap2-grad)" stroke="#FF5722" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <rect x="450" y="60" width="310" height="40" rx="10" ry="10" fill="#FF5722"/>
+  <rect x="450" y="90" width="310" height="10" fill="#FF5722"/>
+  <text x="605" y="86" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Snapshot 2 (new)</text>
+
+  <!-- Mount points inside Snapshot 2 -->
+  <rect x="470" y="115" width="270" height="36" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="485" y="138" font-family="monospace" font-size="12" font-weight="bold" fill="#009688">/</text>
+  <text x="505" y="138" font-family="sans-serif" font-size="12" fill="#555">read-only (base squashfs)</text>
+
+  <rect x="470" y="160" width="270" height="36" rx="6" ry="6" fill="#FFF8E1" stroke="#FF9800" stroke-width="1.5"/>
+  <text x="485" y="183" font-family="monospace" font-size="12" font-weight="bold" fill="#E65100">/etc</text>
+  <text x="505" y="183" font-family="sans-serif" font-size="12" fill="#555">rw overlay (upperdir)</text>
+
+  <rect x="470" y="205" width="270" height="36" rx="6" ry="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="1.5"/>
+  <text x="485" y="228" font-family="monospace" font-size="12" font-weight="bold" fill="#1565C0">/var</text>
+  <text x="505" y="228" font-family="sans-serif" font-size="12" fill="#555">persistent read-write</text>
+
+  <rect x="470" y="250" width="270" height="36" rx="6" ry="6" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <text x="485" y="273" font-family="monospace" font-size="12" font-weight="bold" fill="#009688">/usr</text>
+  <text x="505" y="273" font-family="sans-serif" font-size="12" fill="#555">read-only (squashfs)</text>
+
+  <!-- Status badge -->
+  <rect x="535" y="305" width="150" height="28" rx="14" ry="14" fill="#FF5722"/>
+  <text x="610" y="324" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">● Pending reboot</text>
+
+  <!-- New snapshot filesystem info -->
+  <text x="605" y="360" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">snapshot=20250629-1</text>
+  <text x="605" y="376" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">subvol=@/.snapshots/2/snapshot</text>
+
+  <!-- Update marker on Snapshot 2 -->
+  <rect x="540" y="395" width="140" height="24" rx="12" ry="12" fill="#E0F2F1" stroke="#009688" stroke-width="1"/>
+  <text x="610" y="412" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#009688">Created by transactional-update</text>
+
+  <!-- ===== Bottom note: Rollback ===== -->
+  <rect x="50" y="420" width="700" height="60" rx="8" ry="8" fill="#FFF3E0" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="400" y="445" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#E65100">⚠ Rollback on failure</text>
+  <text x="400" y="465" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">If the new snapshot fails to boot or a health check fails, the system automatically falls back to Snapshot 1.</text>
+  <text x="400" y="480" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">No data loss — /var is shared, /etc overlay changes are merged on success.</text>
+</svg>

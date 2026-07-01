@@ -1,36 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
-<defs><filter id="s" x="-5%" y="-5%" width="115%" height="115%">
-<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/></filter>
-<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d1117"/></linearGradient></defs>
-<rect width="700" height="420" fill="url(#bg)" rx="8"/>
-<text x="350.0" y="30" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="18" font-weight="bold">RKE2 vs K3s — Decision Guide</text><rect x="30" y="45" width="640" height="55" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
-<text x="350" y="72" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="15" font-weight="bold">What is your deployment environment?</text>
-<rect x="40" y="120" width="290" height="60" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
-<text x="185" y="147" text-anchor="middle" fill="#26a69a" font-family="sans-serif" font-size="13" font-weight="bold">Production DC / Regulated / Enterprise</text>
-<text x="185" y="167" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">FIPS, CIS, multi-cluster, compliance</text>
-<rect x="40" y="200" width="290" height="170" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
-<text x="55" y="225" text-anchor="start" fill="#009688" font-family="sans-serif" font-size="13">RKE2</text>
-<text x="55" y="248" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• FIPS 140-2 compliant out of the box</text>
-<text x="55" y="267" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• CIS Benchmark v1.7/v1.8 defaults</text>
-<text x="55" y="286" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Static pods — no Docker dependency</text>
-<text x="55" y="305" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• CVE scanning (Trivy in CI)</text>
-<text x="55" y="324" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Full upstream K8s alignment</text>
-<text x="55" y="343" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 5-year LTS support available</text>
-<text x="55" y="362" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Integrates with Rancher Prime</text>
-<rect x="370" y="120" width="290" height="60" rx="5" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#s)"/>
-<text x="515" y="147" text-anchor="middle" fill="#ffab91" font-family="sans-serif" font-size="13" font-weight="bold">Edge / IoT / Lab / ARM / Air-Gap</text>
-<text x="515" y="167" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">Low resource, disconnected, embedded</text>
-<rect x="370" y="200" width="290" height="170" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
-<text x="385" y="225" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="13">K3s</text>
-<text x="385" y="248" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 70 MB single binary — full K8s</text>
-<text x="385" y="267" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• SQLite3 default (no etcd needed)</text>
-<text x="385" y="286" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Batteries included: containerd,</text>
-<text x="385" y="305" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">•   Flannel, CoreDNS, Traefik</text>
-<text x="385" y="324" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• ARM64 / ARMv7 official builds</text>
-<text x="385" y="343" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Offline / air-gap operation</text>
-<text x="385" y="362" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 1M+ active clusters worldwide</text>
-<line x1="350" y1="100" x2="185" y2="118" stroke="#009688" stroke-width="1.5"/>
-<line x1="350" y1="100" x2="515" y2="118" stroke="#ff7043" stroke-width="1.5"/>
-<text x="350" y="405" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">Both distributions are managed by Rancher Prime from a single console</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 580" width="720" height="580">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF5722"/>
+    </marker>
+    <marker id="arrowOrangeSmall" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#FF5722"/>
+    </marker>
+    <!-- Diamond path shape -->
+    <polygon id="diamond" points="0,20 115,0 230,20 115,40"/>
+  </defs>
+
+  <!-- White background -->
+  <rect width="720" height="580" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Kubernetes Distribution Decision Tree — RKE2 vs K3s</text>
+
+  <!-- Outer border -->
+  <rect x="15" y="45" width="690" height="520" rx="8" fill="#faffff" stroke="#009688" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#shadow)"/>
+
+  <!-- ============================================================ -->
+  <!-- LEVEL 1: NEW DEPLOYMENT? -->
+  <!-- ============================================================ -->
+
+  <!-- Diamond 1: New Deployment -->
+  <polygon points="360,75 475,110 360,145 245,110" fill="#ffffff" stroke="#FF5722" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="360" y="107" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="12" font-weight="bold">NEW</text>
+  <text x="360" y="121" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DEPLOYMENT?</text>
+
+  <!-- Yes branch (right) -->
+  <text x="510" y="112" text-anchor="middle" fill="#FF5722" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Yes</text>
+  <line x1="475" y1="110" x2="520" y2="110" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrangeSmall)"/>
+
+  <!-- Skip RKE1 box -->
+  <rect x="525" y="96" width="165" height="30" rx="15" fill="#e0f2f1" stroke="#009688" stroke-width="2"/>
+  <text x="607" y="115" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Skip RKE1 entirely</text>
+
+  <!-- No branch (down) -->
+  <text x="360" y="163" text-anchor="middle" fill="#9E9E9E" font-family="Arial, sans-serif" font-size="11" font-weight="bold">No →</text>
+  <line x1="360" y1="145" x2="360" y2="178" stroke="#9E9E9E" stroke-width="2" marker-end="url(#arrowOrangeSmall)"/>
+
+  <!-- RKE1 → RKE2 migration box -->
+  <rect x="275" y="183" width="170" height="30" rx="15" fill="#f5f5f5" stroke="#9E9E9E" stroke-width="1.5"/>
+  <text x="360" y="202" text-anchor="middle" fill="#616161" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Plan RKE1 → RKE2 migration</text>
+
+  <!-- Arrow from Skip RKE1 down to next diamond -->
+  <line x1="607" y1="126" x2="607" y2="178" stroke="#FF5722" stroke-width="2"/>
+  <line x1="607" y1="178" x2="360" y2="178" stroke="#FF5722" stroke-width="2"/>
+  <line x1="360" y1="178" x2="360" y2="213" stroke="#FF5722" stroke-width="2"/>
+
+  <!-- Arrow from migration box to next diamond -->
+  <line x1="360" y1="213" x2="360" y2="228" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- ============================================================ -->
+  <!-- LEVEL 2: Questions Branching -->
+  <!-- ============================================================ -->
+
+  <!-- Diamond 2: Enterprise requirements -->
+  <polygon points="140,245 285,280 140,315 -5,280" fill="#ffffff" stroke="#FF5722" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="140" y="273" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FIPS / CIS /</text>
+  <text x="140" y="287" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SAP / Temenos</text>
+  <text x="140" y="301" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">/ 50+ nodes?</text>
+
+  <!-- Diamond 3: Resource-constrained -->
+  <polygon points="360,245 505,280 360,315 215,280" fill="#ffffff" stroke="#FF5722" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="360" y="273" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Resource-constrained</text>
+  <text x="360" y="287" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">/ ARM / air-gapped</text>
+  <text x="360" y="301" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">/ single-node?</text>
+
+  <!-- Diamond 4: Mixed -->
+  <polygon points="580,245 725,280 580,315 435,280" fill="#ffffff" stroke="#FF5722" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="580" y="287" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Mixed environment?</text>
+
+  <!-- Arrow from main diamond to the three sub-diamonds -->
+  <line x1="360" y1="228" x2="360" y2="245" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- Horizontal branch lines -->
+  <line x1="140" y1="235" x2="140" y2="245" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <line x1="580" y1="235" x2="580" y2="245" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <line x1="360" y1="235" x2="140" y2="235" stroke="#FF5722" stroke-width="2"/>
+  <line x1="360" y1="235" x2="580" y2="235" stroke="#FF5722" stroke-width="2"/>
+
+  <!-- ============================================================ -->
+  <!-- OUTCOMES -->
+  <!-- ============================================================ -->
+
+  <!-- Outcome 1: RKE2 -->
+  <line x1="140" y1="315" x2="140" y2="355" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <rect x="55" y="360" width="170" height="70" rx="6" fill="#e0f2f1" stroke="#009688" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="140" y="385" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="16" font-weight="bold">RKE2</text>
+  <text x="140" y="405" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="10">Enterprise production</text>
+  <text x="140" y="420" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="9">FIPS 140-2 · CIS · SAP · Temenos</text>
+
+  <!-- Outcome 2: K3s -->
+  <line x1="360" y1="315" x2="360" y2="355" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <rect x="275" y="360" width="170" height="70" rx="6" fill="#fff8e1" stroke="#FF5722" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="360" y="385" text-anchor="middle" fill="#E65100" font-family="Arial, sans-serif" font-size="16" font-weight="bold">K3s</text>
+  <text x="360" y="405" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10">Edge &amp; lightweight</text>
+  <text x="360" y="420" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="9">ARM · Air-gap · Low-power · SQLite3</text>
+
+  <!-- Outcome 3: Both -->
+  <line x1="580" y1="315" x2="580" y2="355" stroke="#FF5722" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <rect x="495" y="360" width="170" height="70" rx="6" fill="#f3e5f5" stroke="#7B1FA2" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="580" y="385" text-anchor="middle" fill="#7B1FA2" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Both!</text>
+  <text x="580" y="405" text-anchor="middle" fill="#6A1B9A" font-family="Arial, sans-serif" font-size="10">RKE2 in DC + K3s at edge</text>
+  <text x="580" y="420" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="9">Managed by Rancher Prime</text>
+
+  <!-- ============================================================ -->
+  <!-- Summary / Footer -->
+  <!-- ============================================================ -->
+
+  <line x1="140" y1="430" x2="140" y2="445" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="360" y1="430" x2="360" y2="445" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="580" y1="430" x2="580" y2="445" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <line x1="140" y1="445" x2="580" y2="445" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="360" y1="445" x2="360" y2="460" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Rancher Prime management box at bottom -->
+  <rect x="210" y="465" width="300" height="50" rx="25" fill="#ffffff" stroke="#FF5722" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="485" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="12" font-weight="bold">All managed from Rancher Prime</text>
+  <text x="360" y="502" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="10">Single-pane-of-glass across data center + edge</text>
+
+  <!-- Legend -->
+  <rect x="30" y="500" width="10" height="10" rx="2" fill="#FF5722"/>
+  <text x="46" y="510" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="9">Decision</text>
+  <rect x="120" y="500" width="10" height="10" rx="2" fill="#009688"/>
+  <text x="136" y="510" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="9">Enterprise path</text>
+  <rect x="250" y="500" width="10" height="10" rx="2" fill="#E65100"/>
+  <text x="266" y="510" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="9">Edge path</text>
+  <rect x="370" y="500" width="10" height="10" rx="2" fill="#7B1FA2"/>
+  <text x="386" y="510" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="9">Hybrid path</text>
+
 </svg>

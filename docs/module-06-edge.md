@@ -41,22 +41,7 @@ SUSE Linux Micro (SL Micro) is the host operating system for SUSE Edge. It is **
 
 ### Transactional Update Model
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                   SL Micro Snapshot Model                │
-│                                                          │
-│  Snapshot 1 (active)       Snapshot 2 (new)             │
-│  ┌──────────────────┐     ┌──────────────────┐          │
-│  │ / (read-only)    │     │ / (read-only)    │          │
-│  │ /etc (rw overlay)│     │ /etc (rw overlay)│          │
-│  │ /var (rw)        │     │ /var (rw)        │          │
-│  │ /usr (ro)        │     │ /usr (ro)        │          │
-│  └──────────────────┘     └──────────────────┘          │
-│         │                          │                     │
-│         └────── Reboot ────────────┘                     │
-│                to activate                               │
-└──────────────────────────────────────────────────────────┘
-```
+![SL Micro Snapshots](assets/images/sl-micro-snapshots.svg)
 
 When an update is available:
 
@@ -86,16 +71,7 @@ Elemental is the **OS lifecycle manager** for SUSE Edge. It treats operating sys
 
 ### How Elemental Works
 
-```
-┌────────────────────┐     OCI Registry      ┌────────────────────┐
-│  Elemental         │  ──────────────────►   │  Edge Nodes        │
-│  (Rancher Prime)   │                        │  (SL Micro + K3s)  │
-│                    │   push/pull images     │                    │
-│  - Build OS images │                        │  - Pull OS updates │
-│  - Version & tag   │   ◄──────────────────  │  - Apply updates   │
-│  - Fleet rollout   │                        │  - Report status   │
-└────────────────────┘                        └────────────────────┘
-```
+![Elemental OCI](assets/images/elemental-oci.svg)
 
 | Elemental Concept | Description |
 |---|---|
@@ -153,29 +129,7 @@ K3s is the Kubernetes distribution of choice for edge deployments. It replaces t
 
 The SUSE Edge platform integrates four components into a unified stack:
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                 Rancher Prime                           │
-│          Fleet management, RBAC, Observability         │
-├─────────────────────────────────────────────────────────┤
-│                    K3s                                  │
-│         Lightweight Kubernetes (edge-optimized)        │
-├─────────────────────────────────────────────────────────┤
-│              SUSE Linux Micro                           │
-│         Immutable OS, Transactional Updates            │
-├─────────────────────────────────────────────────────────┤
-│               Elemental                                 │
-│     OCI-based OS lifecycle, Fleet OS Management        │
-├─────────────────────────────────────────────────────────┤
-│               NeuVector                                 │
-│    Container security, network policy, DLP, CVE scan   │
-└─────────────────────────────────────────────────────────┘
-                      │
-                      ▼
-              Edge Hardware
-    (x86_64 / aarch64 / ARM64)
-    Industrial gateways, 5G servers, retail POS, IoT
-```
+![SUSE Edge Full Stack](assets/images/edge-full-stack.svg)
 
 ### How the Stack Works Together
 
@@ -191,13 +145,7 @@ The SUSE Edge platform integrates four components into a unified stack:
 
 ### Manufacturing (Smart Factory) — SUSE Industrial Edge
 
-```
-PLC ──► OPC UA ──► Industrial Edge Node ──► MQTT ──► Cloud
-                   │
-                   ├── Real-time control loop
-                   ├── Predictive maintenance (ML inferencing)
-                   └── Anomaly detection (NeuVector)
-```
+![Industrial Edge Architecture](assets/images/edge-stack.svg)
 
 Requirements met by SUSE Edge:
 
@@ -212,13 +160,7 @@ Requirements met by SUSE Edge:
 
 ### Telecom (5G) — SUSE Telco Cloud
 
-```
-5G gNB ──► Telco Edge Node ──► 5G Core (UPF) ──► Backhaul
-           │
-           ├── DPDK data plane (high-throughput)
-           ├── SR-IOV NIC partitioning
-           └── CPU pinning for NFV workloads
-```
+![Telco Edge Architecture](assets/images/edge-stack.svg)
 
 Requirements met by SUSE Edge:
 

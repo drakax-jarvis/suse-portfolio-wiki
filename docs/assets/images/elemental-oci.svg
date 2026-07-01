@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <marker id="arrow-right" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#009688"/>
+    </marker>
+    <marker id="arrow-left" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#009688"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="440" fill="#FFFFFF" rx="0"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333333">Elemental — OCI-Based OS Lifecycle</text>
+
+  <!-- ===== Left box: Elemental (Rancher Prime) ===== -->
+  <rect x="30" y="60" width="280" height="320" rx="10" ry="10" fill="#FFFFFF" stroke="#009688" stroke-width="2.5"/>
+  <rect x="30" y="60" width="280" height="45" rx="10" ry="10" fill="#009688"/>
+  <rect x="30" y="95" width="280" height="10" fill="#009688"/>
+  <text x="170" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Elemental (Rancher Prime)</text>
+  <text x="170" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#FFFFFF">OS Image Builder &amp; Fleet Manager</text>
+
+  <!-- Step 1: Build -->
+  <rect x="52" y="118" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="72" cy="142" r="12" fill="#009688"/>
+  <text x="72" y="147" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="92" y="144" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Build OS Images</text>
+  <text x="92" y="160" font-family="sans-serif" font-size="10" fill="#555">Seed images, custom config<br/>Kernel + initrd + squashfs</text>
+  <line x1="52" y1="175" x2="288" y2="175" stroke="#009688" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Step 2: Version & Tag -->
+  <rect x="52" y="193" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="72" cy="217" r="12" fill="#009688"/>
+  <text x="72" y="222" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="92" y="219" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Version &amp; Tag</text>
+  <text x="92" y="235" font-family="sans-serif" font-size="10" fill="#555">Semantic versioning (v1.2.3)<br/>OCI tag &amp; manifest</text>
+  <line x1="52" y1="250" x2="288" y2="250" stroke="#009688" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Step 3: Fleet Rollout -->
+  <rect x="52" y="268" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="72" cy="292" r="12" fill="#009688"/>
+  <text x="72" y="297" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="92" y="294" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Fleet Rollout</text>
+  <text x="92" y="310" font-family="sans-serif" font-size="10" fill="#555">Controlled rollout strategy<br/>Canary, staged, or blue/green</text>
+
+  <!-- ===== Center: OCI Registry (double arrow) ===== -->
+  <rect x="310" y="170" width="180" height="100" rx="10" ry="10" fill="#FFF3E0" stroke="#FF5722" stroke-width="2"/>
+  <text x="400" y="200" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#E65100">OCI Registry</text>
+  <text x="400" y="218" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">(Docker-compatible)</text>
+  <text x="400" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">push / pull</text>
+  <text x="400" y="252" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">OS images</text>
+
+  <!-- Arrow left to right (push) -->
+  <line x1="315" y1="195" x2="310" y2="195" stroke="#009688" stroke-width="2" marker-end="url(#arrow-left)"/>
+  <text x="313" y="178" font-family="sans-serif" font-size="10" fill="#009688">pull</text>
+
+  <!-- Arrow right to left (pull) -->
+  <line x1="490" y1="220" x2="490" y2="220" stroke="#009688" stroke-width="2" marker-end="url(#arrow-right)"/>
+  <text x="488" y="242" font-family="sans-serif" font-size="10" fill="#009688">push</text>
+
+  <!-- Top arrow from Elemental to registry -->
+  <path d="M 270,130 L 300,130 L 310,195" fill="none" stroke="#009688" stroke-width="2.5" marker-end="url(#arrow-right)"/>
+  <text x="282" y="125" text-anchor="end" font-family="sans-serif" font-size="10" fill="#009688" font-weight="bold">push</text>
+
+  <!-- Bottom arrow from registry to Edge Nodes -->
+  <path d="M 490,220 L 500,212 L 520,212" fill="none" stroke="#009688" stroke-width="2.5" marker-end="url(#arrow-right)"/>
+
+  <!-- ===== Right box: Edge Nodes ===== -->
+  <rect x="490" y="60" width="280" height="320" rx="10" ry="10" fill="#FFFFFF" stroke="#009688" stroke-width="2.5"/>
+  <rect x="490" y="60" width="280" height="45" rx="10" ry="10" fill="#009688"/>
+  <rect x="490" y="95" width="280" height="10" fill="#009688"/>
+  <text x="630" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Edge Nodes</text>
+  <text x="630" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#FFFFFF">SL Micro + K3s</text>
+
+  <!-- Step A: Pull -->
+  <rect x="512" y="118" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="532" cy="142" r="12" fill="#009688"/>
+  <text x="532" y="147" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">A</text>
+  <text x="552" y="144" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Pull OS Updates</text>
+  <text x="552" y="160" font-family="sans-serif" font-size="10" fill="#555">Fetch new OCI layers<br/>Download delta updates</text>
+  <line x1="512" y1="175" x2="748" y2="175" stroke="#009688" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Step B: Apply -->
+  <rect x="512" y="193" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="532" cy="217" r="12" fill="#009688"/>
+  <text x="532" y="222" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">B</text>
+  <text x="552" y="219" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Apply Updates</text>
+  <text x="552" y="235" font-family="sans-serif" font-size="10" fill="#555">Transactional update via Elemental<br/>Reboot into new snapshot</text>
+  <line x1="512" y1="250" x2="748" y2="250" stroke="#009688" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Step C: Report -->
+  <rect x="512" y="268" width="236" height="65" rx="8" ry="8" fill="#E0F2F1" stroke="#009688" stroke-width="1.5"/>
+  <circle cx="532" cy="292" r="12" fill="#009688"/>
+  <text x="532" y="297" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">C</text>
+  <text x="552" y="294" font-family="sans-serif" font-size="13" font-weight="bold" fill="#009688">Report Status</text>
+  <text x="552" y="310" font-family="sans-serif" font-size="10" fill="#555">State reporting back to Fleet<br/>Health checks &amp; remediation</text>
+
+  <!-- Bottom note -->
+  <rect x="100" y="395" width="600" height="30" rx="6" ry="6" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1"/>
+  <text x="400" y="415" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2E7D32">✓ Declarative OS management — OS images are versioned containers in OCI registries</text>
+</svg>

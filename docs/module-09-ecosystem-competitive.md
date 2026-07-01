@@ -29,57 +29,7 @@ SUSE competes in a market where every major infrastructure vendor has a Kubernet
 
 ## Full Portfolio Map
 
-```text
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                      SUSE CLOUD NATIVE PORTFOLIO MAP                          │
-│                           (SUSECON 2025 Edition)                              │
-├──────────────────────────────────────────────────────────────────────────────┤
-│                                                                               │
-│  ┌────────────────────────────────────────────────────────────────────────┐  │
-│  │                    MANAGEMENT & OPERATIONS                              │  │
-│  │  ┌──────────────────────────────────────────────────────────────────┐  │  │
-│  │  │                  RANCHER PRIME (Multi-Cluster)                    │  │  │
-│  │  │  • Cluster Lifecycle (CAPI)  • Fleet GitOps  • OCI Prime Registry│  │  │
-│  │  │  • RBAC / OIDC / AD  • Cost Analytics  • Rancher Co-pilot (AI)   │  │  │
-│  │  └──────────────────────────────────────────────────────────────────┘  │  │
-│  └────────────────────────────────────────────────────────────────────────┘  │
-│                                                                               │
-│  ┌──────────────────┬──────────────────┬──────────────────┬─────────────────┐ │
-│  │     RKE2         │      K3s         │   Harvester      │  Elemental      │ │
-│  │  (Enterprise)    │   (Edge/IoT)     │  (VM Platform)   │ (OS Lifecycle)  │ │
-│  │  • FIPS 140-2    │  • <100 MB       │  • KubeVirt      │  • Immutable OS │ │
-│  │  • CIS Hardened  │  • SQLite/etcd   │  • VM Mgmt       │  • OCI Images   │ │
-│  │  • SAP Certified │  • ARM64 ARMv7   │  • 3x Density    │  • Fleet Mgmt   │ │
-│  │  • Temenos Valid │  • Air-gapped    │  • Live Migrate  │  • A/B Updates  │ │
-│  └──────────────────┴──────────────────┴──────────────────┴─────────────────┘ │
-│                                                                               │
-│  ┌──────────────────┬──────────────────┬──────────────────┬─────────────────┐ │
-│  │    NeuVector     │    Longhorn      │   Kubewarden     │   Fleet         │ │
-│  │ (Security/CNAPP) │   (Storage)      │  (Policy as Code)│  (GitOps Engine)│ │
-│  │ • Zero-Trust FW  │ • Block Storage  │ • WebAssembly    │ • Multi-Cluster │ │
-│  │ • DLP / WAF      │ • Replication    │ • 250+ Policies  │ • Drift Detect  │ │
-│  │ • AI/ML Scanning │ • NVMe-oF        │ • OCI Distro     │ • OCI Artifacts │ │
-│  │ • Runtime Detect │ • 30K+ Deploy    │ • Context-Aware  │ • 5K+ Clusters  │ │
-│  └──────────────────┴──────────────────┴──────────────────┴─────────────────┘ │
-│                                                                               │
-│  ┌────────────────────────────────────────────────────────────────────────┐  │
-│  │                    INFRASTRUCTURE LAYER                                  │  │
-│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌────────────┐  │  │
-│  │  │ SLE / SL Micro│  │  Public Cloud│  │ Bare Metal   │  │ Edge HW    │  │
-│  │  │ (OS Platform) │  │ (AWS/Azure/GCP)│ (DC / On-prem)│  │(RPi, Jetson)│  │
-│  │  └──────────────┘  └──────────────┘  └──────────────┘  └────────────┘  │  │
-│  └────────────────────────────────────────────────────────────────────────┘  │
-│                                                                               │
-│  ┌────────────────────────────────────────────────────────────────────────┐  │
-│  │                    STRATEGIC VERTICALS                                   │  │
-│  │  ┌────────────────────┐  ┌────────────────────┐  ┌──────────────────┐  │  │
-│  │  │  SUSE Edge 4.0     │  │  SUSE AI           │  │  SAP/Temenos     │  │  │
-│  │  │ (Edge/Industrial/  │  │ (MCP, Agentic AI,  │  │ (Validated Stacks│  │  │
-│  │  │  Telco variants)   │  │  GPU Scheduling)   │  │  for Enterprise) │  │  │
-│  │  └────────────────────┘  └────────────────────┘  └──────────────────┘  │  │
-│  └────────────────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
+![SUSE Portfolio Map](assets/images/portfolio-map.svg)
 
 !!! tip "The 'Integrated Stack' Story"
     Every product in this map is engineered by SUSE (or its acquisition pipeline) and ships under a **single subscription**. No stitching together disparate open source projects. No multiple support contracts. One vendor, one SLA, one platform vision.

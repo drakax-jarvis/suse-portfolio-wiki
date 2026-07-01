@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#009688"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="720" height="460" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="16" font-weight="bold">RKE2 Cluster Topology — 3 Server Nodes + N Agent Nodes</text>
+
+  <!-- Outer box -->
+  <rect x="20" y="50" width="680" height="395" rx="8" fill="#f5fffd" stroke="#009688" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="50" width="680" height="32" rx="8" fill="#009688"/>
+  <rect x="20" y="66" width="680" height="16" fill="#009688"/>
+  <text x="360" y="72" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RKE2 CLUSTER — 3 Server Nodes + N Agent Nodes</text>
+
+  <!-- ============================================================ -->
+  <!-- Server nodes row -->
+  <!-- ============================================================ -->
+  <text x="360" y="105" text-anchor="middle" fill="#009688" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Server Nodes (etcd + Control Plane)</text>
+
+  <!-- cp-01 -->
+  <rect x="60" y="115" width="170" height="70" rx="6" fill="#ffffff" stroke="#009688" stroke-width="2"/>
+  <rect x="60" y="115" width="170" height="24" rx="6" fill="#009688"/>
+  <rect x="60" y="127" width="170" height="12" fill="#009688"/>
+  <text x="145" y="133" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">cp-01</text>
+  <text x="145" y="157" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">rke2 server</text>
+  <text x="145" y="174" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="10">etcd + control plane</text>
+
+  <!-- cp-02 -->
+  <rect x="275" y="115" width="170" height="70" rx="6" fill="#ffffff" stroke="#009688" stroke-width="2"/>
+  <rect x="275" y="115" width="170" height="24" rx="6" fill="#009688"/>
+  <rect x="275" y="127" width="170" height="12" fill="#009688"/>
+  <text x="360" y="133" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">cp-02</text>
+  <text x="360" y="157" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">rke2 server</text>
+  <text x="360" y="174" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="10">etcd + control plane</text>
+
+  <!-- cp-03 -->
+  <rect x="490" y="115" width="170" height="70" rx="6" fill="#ffffff" stroke="#009688" stroke-width="2"/>
+  <rect x="490" y="115" width="170" height="24" rx="6" fill="#009688"/>
+  <rect x="490" y="127" width="170" height="12" fill="#009688"/>
+  <text x="575" y="133" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">cp-03</text>
+  <text x="575" y="157" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="11" font-weight="bold">rke2 server</text>
+  <text x="575" y="174" text-anchor="middle" fill="#78909c" font-family="Arial, sans-serif" font-size="10">etcd + control plane</text>
+
+  <!-- Connecting lines between server nodes -->
+  <line x1="230" y1="150" x2="275" y2="150" stroke="#009688" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <line x1="445" y1="150" x2="490" y2="150" stroke="#009688" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  <!-- Bidirectional indication lines -->
+  <line x1="275" y1="145" x2="230" y2="145" stroke="#009688" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <line x1="490" y1="145" x2="445" y2="145" stroke="#009688" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <!-- Lines from all 3 servers down to the cluster bus -->
+  <line x1="145" y1="185" x2="145" y2="210" stroke="#009688" stroke-width="1.5"/>
+  <line x1="360" y1="185" x2="360" y2="210" stroke="#009688" stroke-width="1.5"/>
+  <line x1="575" y1="185" x2="575" y2="210" stroke="#009688" stroke-width="1.5"/>
+
+  <!-- Horizontal bus line -->
+  <line x1="145" y1="210" x2="575" y2="210" stroke="#009688" stroke-width="2"/>
+  <!-- Down line from bus -->
+  <line x1="360" y1="210" x2="360" y2="235" stroke="#009688" stroke-width="2"/>
+  <polygon points="360,240 353,232 367,232" fill="#009688"/>
+
+  <!-- ============================================================ -->
+  <!-- Worker nodes row -->
+  <!-- ============================================================ -->
+  <text x="360" y="260" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Worker Nodes (rke2 agent)</text>
+
+  <!-- worker1 -->
+  <rect x="60" y="275" width="170" height="65" rx="6" fill="#ffffff" stroke="#00796B" stroke-width="2"/>
+  <rect x="60" y="275" width="170" height="24" rx="6" fill="#00796B"/>
+  <rect x="60" y="287" width="170" height="12" fill="#00796B"/>
+  <text x="145" y="293" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">worker-1</text>
+  <text x="145" y="318" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">rke2 agent</text>
+
+  <!-- worker2 -->
+  <rect x="275" y="275" width="170" height="65" rx="6" fill="#ffffff" stroke="#00796B" stroke-width="2"/>
+  <rect x="275" y="275" width="170" height="24" rx="6" fill="#00796B"/>
+  <rect x="275" y="287" width="170" height="12" fill="#00796B"/>
+  <text x="360" y="293" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">worker-2</text>
+  <text x="360" y="318" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">rke2 agent</text>
+
+  <!-- worker3 -->
+  <rect x="490" y="275" width="170" height="65" rx="6" fill="#ffffff" stroke="#00796B" stroke-width="2"/>
+  <rect x="490" y="275" width="170" height="24" rx="6" fill="#00796B"/>
+  <rect x="490" y="287" width="170" height="12" fill="#00796B"/>
+  <text x="575" y="293" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">worker-3</text>
+  <text x="575" y="318" text-anchor="middle" fill="#00796B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">rke2 agent</text>
+
+  <!-- Lines from bus to each worker -->
+  <line x1="145" y1="240" x2="145" y2="275" stroke="#009688" stroke-width="1.5"/>
+  <line x1="360" y1="240" x2="360" y2="275" stroke="#009688" stroke-width="1.5"/>
+  <line x1="575" y1="240" x2="575" y2="275" stroke="#009688" stroke-width="1.5"/>
+
+  <!-- Dotted horizontal line indicating more agents possible -->
+  <line x1="60" y1="355" x2="660" y2="355" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="360" y="370" text-anchor="middle" fill="#9E9E9E" font-family="Arial, sans-serif" font-size="11" font-style="italic">... more worker nodes can be added (N agents)</text>
+
+  <!-- Legend -->
+  <rect x="130" y="388" width="12" height="12" rx="2" fill="#009688"/>
+  <text x="148" y="399" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="10">Server (etcd + control plane)</text>
+  <rect x="370" y="388" width="12" height="12" rx="2" fill="#00796B"/>
+  <text x="388" y="399" text-anchor="start" fill="#616161" font-family="Arial, sans-serif" font-size="10">Agent (worker node)</text>
+
+  <!-- Rancher Prime management indicator -->
+  <rect x="580" y="395" width="100" height="38" rx="5" fill="#fff3e0" stroke="#FF5722" stroke-width="1"/>
+  <text x="630" y="411" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Managed by</text>
+  <text x="630" y="425" text-anchor="middle" fill="#BF360C" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Rancher Prime</text>
+
+</svg>

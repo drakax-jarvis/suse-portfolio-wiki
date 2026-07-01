@@ -26,37 +26,7 @@ RKE2 is SUSE's **CIS-hardened, FIPS 140-2-validated Kubernetes distribution** fo
 
 ### Architecture
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                    RKE2 CONTROL PLANE                        │
-│                                                              │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌───────────────┐ │
-│  │ API Svr │  │  etcd   │  │ Scheduler│  │ Ctrl Mgr      │ │
-│  └────┬────┘  └────┬────┘  └────┬────┘  └───────┬───────┘ │
-│       │            │            │                │         │
-│  ┌────┴────────────┴────────────┴────────────────┴───────┐ │
-│  │              kubelet     │     kube-proxy              │ │
-│  └──────────────────────────┴─────────────────────────────┘ │
-│       │                      │                              │
-│  ┌────┴──────────────────────────┴────────────────────────┐ │
-│  │               containerd (CRI)                          │ │
-│  └─────────────────────────────────────────────────────────┘ │
-│       │                                                      │
-│  ┌────┴────────────────────────────────────────────────────┐ │
-│  │           Static Pods (control plane)                    │ │
-│  │   • etcd     • kube-apiserver    • kube-controller-mgr  │ │
-│  │   • kube-scheduler   • cloud-controller-manager         │ │
-│  └─────────────────────────────────────────────────────────┘ │
-├─────────────────────────────────────────────────────────────┤
-│                    RKE2 WORKER NODE                          │
-│  ┌──────────┐  ┌──────────┐  ┌──────────────────────────┐ │
-│  │ kubelet  │  │kube-proxy│  │     containerd           │ │
-│  │          │  │          │  │   ┌──────────────────┐   │ │
-│  │          │  │          │  │   │ Pods / Containers│   │ │
-│  │          │  │          │  │   └──────────────────┘   │ │
-│  └──────────┘  └──────────┘  └──────────────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
-```
+![RKE2 Architecture](assets/images/rke2-architecture.svg)
 
 Key architectural characteristics:
 
@@ -86,26 +56,7 @@ RKE2 configuration is stored in `/etc/rancher/rke2/config.yaml` and includes the
 
 ### RKE2 Instance Types (Server vs. Agent)
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                    RKE2 CLUSTER  (3 Servers + N Agents)      │
-│                                                               │
-│     ┌────────────┐  ┌────────────┐  ┌────────────┐          │
-│     │ cp-01      │  │ cp-02      │  │ cp-03      │          │
-│     │ rke2 server│  │ rke2 server│  │ rke2 server│          │
-│     │ etcd + ctl │  │ etcd + ctl │  │ etcd + ctl │          │
-│     └─────┬──────┘  └─────┬──────┘  └─────┬──────┘          │
-│           │               │               │                  │
-│           └───────────────┼───────────────┘                  │
-│                           │                                  │
-│     ┌─────────────────────┼─────────────────────┐          │
-│     │                     │                     │            │
-│  ┌──┴──────┐        ┌────┴────┐         ┌──────┴───┐       │
-│  │ worker1 │        │ worker2 │         │ worker3  │       │
-│  │rke2 agent│        │rke2 agent│         │rke2 agent│       │
-│  └─────────┘        └─────────┘         └──────────┘       │
-└──────────────────────────────────────────────────────────────┘
-```
+![RKE2 Cluster](assets/images/rke2-cluster.svg)
 
 !!! quote "The 'Why RKE2' Positioning Script"
     > "You need **production-grade Kubernetes** that passes your security team's compliance checklist. RKE2 is the only distribution that ships FIPS 140-2-validated, CIS-hardened out of the box, with a single-binary install and static-pod control plane. If your customer runs SAP, Temenos, or government workloads, RKE2 is the answer.
@@ -122,37 +73,7 @@ K3s is the CNCF-certified **lightweight Kubernetes distribution** (<100 MB binar
 
 ### Architecture
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                    K3s SERVER NODE                          │
-│                                                             │
-│  ┌────────────────────────────────────────────────────────┐│
-│  │              k3s server (single binary)                ││
-│  │  ┌──────────┐  ┌──────────┐  ┌─────────────────────┐  ││
-│  │  │kube-apiserver │kube-scheduler │kube-controller-mgr│  ││
-│  │  └──────┬───┘  └────┬─────┘  └──────────┬──────────┘  ││
-│  │         │            │                    │             ││
-│  │  ┌──────┴────────────┴────────────────────┴──────────┐ ││
-│  │  │  embedded etcd  OR  embedded SQLite3 (default)     ││
-│  │  └────────────────────────────────────────────────────┘ ││
-│  └────────────────────────────────────────────────────────┘│
-│                                                             │
-│  ┌──────────┐  ┌──────────┐  ┌────────────────────────┐   │
-│  │ kubelet  │  │kube-proxy│  │    containerd           │   │
-│  │          │  │          │  │  ┌──────────────────┐  │   │
-│  │          │  │          │  │  │ Pods / Containers│  │   │
-│  │          │  │          │  │  └──────────────────┘  │   │
-│  └──────────┘  └──────────┘  └────────────────────────┘   │
-├────────────────────────────────────────────────────────────┤
-│                    K3s AGENT NODE                           │
-│  ┌──────────┐  ┌──────────┐  ┌────────────────────────┐   │
-│  │ kubelet  │  │kube-proxy│  │    containerd           │   │
-│  │ ┌──────┐ │  │          │  │  ┌──────────────────┐  │   │
-│  │ │tunnel│ │  │          │  │  │ Pods / Containers│  │   │
-│  │ └──────┘ │  │          │  │  └──────────────────┘  │   │
-│  └──────────┘  └──────────┘  └────────────────────────┘   │
-└────────────────────────────────────────────────────────────┘
-```
+![K3s Architecture](assets/images/k3s-architecture.svg)
 
 Key architectural characteristics:
 
@@ -236,38 +157,7 @@ K3s is the foundation of SUSE's edge strategy. See [Module 6: Edge Computing](mo
 
 ## When to Choose Which — Decision Criteria
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                   DECISION TREE                            │
-│                                                             │
-│  Is this a NEW deployment?                                  │
-│  ├── Yes ──► Skip RKE1 entirely                             │
-│  └── No ───► Plan RKE1 → RKE2 migration                     │
-│                                                             │
-│  Does the workload require:                                 │
-│  • FIPS 140-2 compliance?          ──► RKE2                │
-│  • CIS Level 1/2 certified?        ──► RKE2                │
-│  • SAP S/4HANA or BTP?             ──► RKE2                │
-│  • Temenos banking platform?        ──► RKE2                │
-│  • Government / defense certs?      ──► RKE2                │
-│  • Large-scale HA (50+ nodes)?      ──► RKE2                │
-│                                                             │
-│  Is the environment:                                        │
-│  • Resource-constrained (<2 GB RAM)?  ──► K3s              │
-│  • ARM-based (RPi, Jetson)?           ──► K3s              │
-│  • Single-node edge / branch?         ──► K3s (SQLite3)    │
-│  • Air-gapped / disconnected?         ──► K3s              │
-│  • Industrial IoT / factory?          ──► K3s              │
-│  • Vehicle / drone / mobile?          ──► K3s              │
-│  • Low-power / battery-operated?      ──► K3s              │
-│  • 3-node HA with light resources?    ──► K3s (embedded    │
-│                                            etcd)           │
-│                                                             │
-│  Mixed environment?                                         │
-│  └── Both! RKE2 in DC + K3s at edge,                       │
-│      managed from **Rancher Prime**                         │
-└────────────────────────────────────────────────────────────┘
-```
+![K8s Decision Tree](assets/images/k8s-decision-tree.svg)
 
 !!! tip "Common pattern: Hybrid deployment"
     Many customers run **RKE2 in data centers / clouds** for regulated production workloads and **K3s at edge locations** for retail, factory, or branch offices — all managed from a **single Rancher Prime** instance. This is SUSE's differentiated sweet spot.

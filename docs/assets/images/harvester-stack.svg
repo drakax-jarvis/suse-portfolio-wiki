@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 580" width="700" height="580">
+  <rect width="700" height="580" fill="#ffffff" rx="6"/>
+
+  <!-- Hardware Layer (gray, bottom) -->
+  <rect x="50" y="450" width="500" height="80" rx="6" fill="#f5f5f5" stroke="#9E9E9E" stroke-width="2"/>
+  <rect x="50" y="450" width="500" height="30" rx="6" fill="#9E9E9E"/>
+  <rect x="50" y="474" width="500" height="6" fill="#9E9E9E"/>
+  <text x="300" y="470" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Hardware Layer</text>
+  <text x="300" y="498" font-family="sans-serif" font-size="11" fill="#616161" text-anchor="middle">x86/ARM Servers</text>
+  <text x="300" y="514" font-family="sans-serif" font-size="11" fill="#616161" text-anchor="middle">Local Storage · Networking</text>
+
+  <!-- SUSE Linux Micro (teal) -->
+  <rect x="50" y="360" width="500" height="80" rx="6" fill="#e0f2f1" stroke="#009688" stroke-width="2"/>
+  <rect x="50" y="360" width="500" height="30" rx="6" fill="#009688"/>
+  <rect x="50" y="384" width="500" height="6" fill="#009688"/>
+  <text x="300" y="380" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SUSE Linux Micro</text>
+  <text x="300" y="408" font-family="sans-serif" font-size="11" fill="#004d40" text-anchor="middle">Immutable OS</text>
+  <text x="300" y="424" font-family="sans-serif" font-size="11" fill="#004d40" text-anchor="middle">Kubernetes (K3s / RKE2)</text>
+
+  <!-- Harvester Platform (teal) -->
+  <rect x="50" y="270" width="500" height="80" rx="6" fill="#e0f2f1" stroke="#009688" stroke-width="2"/>
+  <rect x="50" y="270" width="500" height="30" rx="6" fill="#009688"/>
+  <rect x="50" y="294" width="500" height="6" fill="#009688"/>
+  <text x="300" y="290" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Harvester Platform</text>
+  <text x="300" y="318" font-family="sans-serif" font-size="11" fill="#004d40" text-anchor="middle">KubeVirt (VM Runtime) · Longhorn (Storage) · Elemental (OS Mgmt)</text>
+
+  <!-- Rancher Prime Management (teal) -->
+  <rect x="50" y="180" width="500" height="80" rx="6" fill="#e0f2f1" stroke="#009688" stroke-width="2"/>
+  <rect x="50" y="180" width="500" height="30" rx="6" fill="#009688"/>
+  <rect x="50" y="204" width="500" height="6" fill="#009688"/>
+  <text x="300" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Rancher Prime Management</text>
+  <text x="300" y="228" font-family="sans-serif" font-size="11" fill="#004d40" text-anchor="middle">VM Lifecycle · K8s Management · Backup/DR · Monitoring</text>
+
+  <!-- Workloads (orange, top) -->
+  <rect x="50" y="90" width="500" height="80" rx="6" fill="#fbe9e7" stroke="#FF5722" stroke-width="2"/>
+  <rect x="50" y="90" width="500" height="30" rx="6" fill="#FF5722"/>
+  <rect x="50" y="114" width="500" height="6" fill="#FF5722"/>
+  <text x="300" y="110" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Workloads</text>
+  <text x="300" y="138" font-family="sans-serif" font-size="11" fill="#bf360c" text-anchor="middle">Existing VMs · Containerized Apps · Edge / Microservices</text>
+
+  <!-- Layer connection arrows -->
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9E9E9E"/>
+    </marker>
+  </defs>
+  <line x1="300" y1="450" x2="300" y2="442" stroke="#9E9E9E" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <line x1="300" y1="360" x2="300" y2="352" stroke="#9E9E9E" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <line x1="300" y1="270" x2="300" y2="262" stroke="#9E9E9E" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <line x1="300" y1="180" x2="300" y2="172" stroke="#9E9E9E" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+  <!-- Side callout: "3x VM Density vs. vSphere" -->
+  <rect x="580" y="190" width="110" height="60" rx="6" fill="#fff8e1" stroke="#FFA000" stroke-width="2"/>
+  <text x="635" y="210" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e65100" text-anchor="middle">3x VM Density</text>
+  <text x="635" y="226" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e65100" text-anchor="middle">vs. vSphere</text>
+  <!-- callout connecting line -->
+  <line x1="580" y1="220" x2="550" y2="220" stroke="#FFA000" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Title -->
+  <text x="300" y="30" font-family="sans-serif" font-size="14" font-weight="bold" fill="#212121" text-anchor="middle">Harvester HCI Stack</text>
+</svg>

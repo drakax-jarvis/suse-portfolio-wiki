@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" font-family="Arial, sans-serif">
+  <rect width="900" height="650" fill="#FAFAFA" rx="10"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">SUSE Portfolio Map</text>
+
+  <!-- Rancher Prime (top) -->
+  <rect x="200" y="45" width="500" height="50" rx="8" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="450" y="67" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">RANCHER PRIME — Central Management</text>
+  <text x="450" y="84" text-anchor="middle" font-size="10" fill="#E0F2F1">Multi-Cluster Mgmt • Fleet GitOps • OCI Prime Registry • RBAC/OIDC • Cost Analytics</text>
+
+  <!-- Row 1: RKE2, K3s, Harvester, Elemental -->
+  <rect x="45" y="115" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="140" y="137" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">RKE2 (Enterprise)</text>
+  <text x="140" y="153" text-anchor="middle" font-size="9" fill="#E0F2F1">FIPS 140-2 • CIS Hardened</text>
+  <text x="140" y="166" text-anchor="middle" font-size="9" fill="#E0F2F1">SAP Certified • Temenos Valid</text>
+
+  <rect x="250" y="115" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="345" y="137" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">K3s (Edge/IoT)</text>
+  <text x="345" y="153" text-anchor="middle" font-size="9" fill="#E0F2F1">&lt;100 MB • SQLite/etcd</text>
+  <text x="345" y="166" text-anchor="middle" font-size="9" fill="#E0F2F1">ARM64 • Air-Gapped</text>
+
+  <rect x="455" y="115" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="550" y="137" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Harvester (VM Platform)</text>
+  <text x="550" y="153" text-anchor="middle" font-size="9" fill="#E0F2F1">KubeVirt • VM Mgmt</text>
+  <text x="550" y="166" text-anchor="middle" font-size="9" fill="#E0F2F1">3x Density • Live Migrate</text>
+
+  <rect x="660" y="115" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="755" y="137" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Elemental (OS Lifecycle)</text>
+  <text x="755" y="153" text-anchor="middle" font-size="9" fill="#E0F2F1">Immutable OS • OCI Images</text>
+  <text x="755" y="166" text-anchor="middle" font-size="9" fill="#E0F2F1">Fleet Mgmt • A/B Updates</text>
+
+  <!-- Connecting lines from Rancher Prime to row 1 -->
+  <line x1="450" y1="95" x2="450" y2="108" stroke="#009688" stroke-width="2"/>
+  <line x1="140" y1="95" x2="140" y2="108" stroke="#009688" stroke-width="2"/>
+  <line x1="345" y1="95" x2="345" y2="108" stroke="#009688" stroke-width="2"/>
+  <line x1="550" y1="95" x2="550" y2="108" stroke="#009688" stroke-width="2"/>
+  <line x1="755" y1="95" x2="755" y2="108" stroke="#009688" stroke-width="2"/>
+
+  <!-- Row 2: Security, Storage, Policy, GitOps -->
+  <rect x="45" y="200" width="190" height="65" rx="6" fill="#FF5722" stroke="#E64A19" stroke-width="2"/>
+  <text x="140" y="222" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">NeuVector (Security)</text>
+  <text x="140" y="238" text-anchor="middle" font-size="9" fill="#FFE0B2">Zero-Trust FW • DLP/WAF</text>
+  <text x="140" y="251" text-anchor="middle" font-size="9" fill="#FFE0B2">AI/ML Scan • Runtime Detect</text>
+
+  <rect x="250" y="200" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="345" y="222" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Longhorn (Storage)</text>
+  <text x="345" y="238" text-anchor="middle" font-size="9" fill="#E0F2F1">Block Storage • Replication</text>
+  <text x="345" y="251" text-anchor="middle" font-size="9" fill="#E0F2F1">NVMe-oF • 30K+ Deployments</text>
+
+  <rect x="455" y="200" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="550" y="222" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Kubewarden (Policy)</text>
+  <text x="550" y="238" text-anchor="middle" font-size="9" fill="#E0F2F1">WebAssembly • 250+ Policies</text>
+  <text x="550" y="251" text-anchor="middle" font-size="9" fill="#E0F2F1">OCI Distribution • Context-Aware</text>
+
+  <rect x="660" y="200" width="190" height="65" rx="6" fill="#009688" stroke="#00796B" stroke-width="2"/>
+  <text x="755" y="222" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Fleet (GitOps Engine)</text>
+  <text x="755" y="238" text-anchor="middle" font-size="9" fill="#E0F2F1">Multi-Cluster • Drift Detect</text>
+  <text x="755" y="251" text-anchor="middle" font-size="9" fill="#E0F2F1">OCI Artifacts • 5K+ Clusters</text>
+
+  <!-- Infrastructure Layer -->
+  <rect x="45" y="290" width="805" height="75" rx="6" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="2"/>
+  <text x="450" y="312" text-anchor="middle" font-size="13" font-weight="bold" fill="#616161">INFRASTRUCTURE LAYER</text>
+
+  <rect x="70" y="322" width="175" height="32" rx="4" fill="#E0E0E0" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="157" y="343" text-anchor="middle" font-size="11" fill="#424242">SLE / SLE Micro (OS)</text>
+
+  <rect x="260" y="322" width="175" height="32" rx="4" fill="#E0E0E0" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="347" y="343" text-anchor="middle" font-size="11" fill="#424242">Public Cloud (AWS/Azure/GCP)</text>
+
+  <rect x="450" y="322" width="175" height="32" rx="4" fill="#E0E0E0" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="537" y="343" text-anchor="middle" font-size="11" fill="#424242">Bare Metal (Data Center)</text>
+
+  <rect x="640" y="322" width="185" height="32" rx="4" fill="#E0E0E0" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="732" y="343" text-anchor="middle" font-size="11" fill="#424242">Edge HW (RPi, Jetson x86)</text>
+
+  <!-- Strategic Verticals -->
+  <rect x="45" y="385" width="805" height="110" rx="6" fill="#FFF3E0" stroke="#FF5722" stroke-width="2"/>
+  <text x="450" y="407" text-anchor="middle" font-size="13" font-weight="bold" fill="#E64A19">STRATEGIC VERTICALS</text>
+
+  <rect x="65" y="418" width="245" height="65" rx="5" fill="#FFF" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="187" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#E64A19">SUSE Edge 4.0</text>
+  <text x="187" y="456" text-anchor="middle" font-size="10" fill="#616161">Edge / Industrial / Telco</text>
+  <text x="187" y="470" text-anchor="middle" font-size="10" fill="#616161">Real-time kernel, DPDK, offline</text>
+
+  <rect x="325" y="418" width="245" height="65" rx="5" fill="#FFF" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="447" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#E64A19">SUSE AI</text>
+  <text x="447" y="456" text-anchor="middle" font-size="10" fill="#616161">MCP, Agentic AI</text>
+  <text x="447" y="470" text-anchor="middle" font-size="10" fill="#616161">GPU Scheduling, LLM Inference</text>
+
+  <rect x="585" y="418" width="245" height="65" rx="5" fill="#FFF" stroke="#FF5722" stroke-width="1.5"/>
+  <text x="707" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#E64A19">SAP / Temenos</text>
+  <text x="707" y="456" text-anchor="middle" font-size="10" fill="#616161">Validated Enterprise Stacks</text>
+  <text x="707" y="470" text-anchor="middle" font-size="10" fill="#616161">SAP #1 Linux for 20+ years</text>
+
+  <!-- Bottom: MultiLinux -->
+  <rect x="45" y="510" width="805" height="55" rx="6" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="450" y="535" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">SUSE MultiLinux Manager &amp; Support</text>
+  <text x="450" y="553" text-anchor="middle" font-size="10" fill="#616161">Unified patch management, compliance, and support across SUSE + Red Hat Enterprise Linux + Ubuntu</text>
+
+  <!-- Side bar: Key Stats -->
+  <rect x="45" y="580" width="805" height="55" rx="6" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.5"/>
+  <text x="450" y="600" text-anchor="middle" font-size="11" fill="#546E7A">Key Metrics: 15,000+ customer teams · 1M+ K3s clusters · 30,000+ Longhorn deployments · 250+ Kubewarden policies</text>
+  <text x="450" y="618" text-anchor="middle" font-size="11" fill="#546E7A">3x VM density vs. vSphere · 3 Edge variants · $3.4M avg annual benefit (IDC) · 5-year LTS · SLSA L3</text>
+
+  <!-- Footer -->
+  <text x="450" y="642" text-anchor="middle" font-size="9" fill="#9E9E9E">SUSE Portfolio Map — SUSECON 2025 Edition</text>
+</svg>
