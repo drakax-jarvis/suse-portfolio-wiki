@@ -1,40 +1,6 @@
 /* ===========================================
-   Move navigation sidebar from left to right
+   Navigation layout: main nav left, TOC right
    =========================================== */
-
-/* Swap the grid positions: nav goes right, content shifts left */
-.md-grid {
-  max-width: 64rem;
-}
-
-/* On screens wide enough for the 3-column layout */
-@media screen and (min-width: 76.25em) {
-  /* Move navigation (primary sidebar) to the right */
-  .md-sidebar--primary {
-    order: 2;
-    right: 0;
-    left: auto;
-    margin-left: 1.6rem;
-  }
-
-  /* Keep TOC (secondary sidebar) on the left */
-  .md-sidebar--secondary {
-    order: 0;
-    left: 0;
-    right: auto;
-  }
-
-  /* Adjust the main content grid */
-  .md-sidebar--primary .md-sidebar__scrollwrap {
-    overflow: hidden;
-  }
-
-  /* Hide the TOC sidebar since we now have nav on the right */
-  /* Actually, let's keep TOC available for deep page navigation */
-  .md-sidebar--secondary {
-    display: none; /* Hide TOC - the right nav replaces its function */
-  }
-}
 
 /* Make the navigation labels more readable */
 .md-nav--primary .md-nav__title {
@@ -63,15 +29,12 @@
   background-color: var(--md-default-fg-color--lighter);
 }
 
-/* Smaller screens: keep standard behavior */
-@media screen and (max-width: 76.1875em) {
-  .md-sidebar--primary {
-    order: 0;
-    left: -12.1rem;
-    right: auto;
-  }
-  .md-sidebar--primary.md-sidebar--open {
-    left: 0;
+/* Move the TOC (table of contents) sidebar to the right */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    order: 2;
+    right: 0;
+    left: auto;
   }
 }
 
