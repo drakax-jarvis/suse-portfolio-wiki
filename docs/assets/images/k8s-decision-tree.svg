@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+<defs><filter id="s" x="-5%" y="-5%" width="115%" height="115%">
+<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d1117"/></linearGradient></defs>
+<rect width="700" height="420" fill="url(#bg)" rx="8"/>
+<text x="350.0" y="30" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="18" font-weight="bold">RKE2 vs K3s — Decision Guide</text><rect x="30" y="45" width="640" height="55" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
+<text x="350" y="72" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="15" font-weight="bold">What is your deployment environment?</text>
+<rect x="40" y="120" width="290" height="60" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
+<text x="185" y="147" text-anchor="middle" fill="#26a69a" font-family="sans-serif" font-size="13" font-weight="bold">Production DC / Regulated / Enterprise</text>
+<text x="185" y="167" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">FIPS, CIS, multi-cluster, compliance</text>
+<rect x="40" y="200" width="290" height="170" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
+<text x="55" y="225" text-anchor="start" fill="#009688" font-family="sans-serif" font-size="13">RKE2</text>
+<text x="55" y="248" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• FIPS 140-2 compliant out of the box</text>
+<text x="55" y="267" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• CIS Benchmark v1.7/v1.8 defaults</text>
+<text x="55" y="286" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Static pods — no Docker dependency</text>
+<text x="55" y="305" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• CVE scanning (Trivy in CI)</text>
+<text x="55" y="324" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Full upstream K8s alignment</text>
+<text x="55" y="343" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 5-year LTS support available</text>
+<text x="55" y="362" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Integrates with Rancher Prime</text>
+<rect x="370" y="120" width="290" height="60" rx="5" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#s)"/>
+<text x="515" y="147" text-anchor="middle" fill="#ffab91" font-family="sans-serif" font-size="13" font-weight="bold">Edge / IoT / Lab / ARM / Air-Gap</text>
+<text x="515" y="167" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">Low resource, disconnected, embedded</text>
+<rect x="370" y="200" width="290" height="170" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
+<text x="385" y="225" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="13">K3s</text>
+<text x="385" y="248" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 70 MB single binary — full K8s</text>
+<text x="385" y="267" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• SQLite3 default (no etcd needed)</text>
+<text x="385" y="286" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Batteries included: containerd,</text>
+<text x="385" y="305" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">•   Flannel, CoreDNS, Traefik</text>
+<text x="385" y="324" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• ARM64 / ARMv7 official builds</text>
+<text x="385" y="343" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• Offline / air-gap operation</text>
+<text x="385" y="362" text-anchor="start" fill="#78909c" font-family="sans-serif" font-size="10">• 1M+ active clusters worldwide</text>
+<line x1="350" y1="100" x2="185" y2="118" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="100" x2="515" y2="118" stroke="#ff7043" stroke-width="1.5"/>
+<text x="350" y="405" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">Both distributions are managed by Rancher Prime from a single console</text>
+</svg>

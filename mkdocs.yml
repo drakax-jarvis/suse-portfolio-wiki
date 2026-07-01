@@ -1,0 +1,65 @@
+site_name: SUSE Portfolio — Deep Study Wiki
+site_description: Comprehensive study material for the SUSE portfolio positioning exercise
+site_author: SUSE Enablement
+site_url: "http://localhost:8080"
+
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: deep orange
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs
+  icon:
+    logo: material/cloud-braces
+
+extra_css:
+  - assets/stylesheets/nav-right.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rancher
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/rancher
+
+nav:
+  - Home: index.md
+  - "1. Strategy & Platform Overview": module-01-strategy.md
+  - "2. K8s Distributions (RKE2, K3s)": module-02-k8s-distributions.md
+  - "3. Rancher Prime Multi-Cluster Mgmt": module-03-rancher-prime.md
+  - "4. Security (NeuVector)": module-04-neuvector.md
+  - "5. Virtualization (Harvester)": module-05-harvester.md
+  - "6. Edge Computing": module-06-edge.md
+  - "7. Storage & GitOps": module-07-storage-gitops.md
+  - "8. Policy as Code (Kubewarden)": module-08-kubewarden.md
+  - "9. Ecosystem & Competitive": module-09-ecosystem-competitive.md
+  - "10. Sales Scenarios by Vertical": module-10-sales-scenarios.md
+  - "11. MultiLinux Management": module-11-multilinux.md
+  - "Quick Reference Card": quick-reference.md

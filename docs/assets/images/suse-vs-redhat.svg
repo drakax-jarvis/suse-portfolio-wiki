@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 480" width="750" height="480">
+<defs><filter id="s" x="-5%" y="-5%" width="115%" height="115%">
+<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d1117"/></linearGradient></defs>
+<rect width="750" height="480" fill="url(#bg)" rx="8"/>
+<text x="375.0" y="30" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="18" font-weight="bold">SUSE Rancher Prime vs Red Hat OpenShift</text><rect x="20" y="45" width="355" height="400" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
+<rect x="375" y="45" width="355" height="400" rx="5" fill="#16213e" stroke="#16213e" stroke-width="1.5" filter="url(#s)"/>
+<rect x="20" y="45" width="355" height="35" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
+<text x="197" y="68" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="15" font-weight="bold">SUSE Rancher Prime</text>
+<rect x="375" y="45" width="355" height="35" rx="5" fill="#16213e" stroke="#ef5350" stroke-width="1.5" filter="url(#s)"/>
+<text x="552" y="68" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="15" font-weight="bold">Red Hat OpenShift</text>
+<rect x="20" y="95" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="114" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">K8s Distributions</text>
+<text x="30" y="132" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">RKE2 + K3s + any</text>
+<text x="385" y="114" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">K8s Distributions</text>
+<text x="385" y="132" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">OpenShift-only</text>
+<text x="30" y="147" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">VM Management</text>
+<text x="30" y="165" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Harvester (KubeVirt)</text>
+<text x="385" y="147" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">VM Management</text>
+<text x="385" y="165" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">OpenShift Virt.</text>
+<rect x="20" y="161" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="180" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Runtime Security</text>
+<text x="30" y="198" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">NeuVector (DLP+WAF)</text>
+<text x="385" y="180" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Runtime Security</text>
+<text x="385" y="198" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">ACS (add-on)</text>
+<rect x="20" y="194" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="213" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Edge K8s</text>
+<text x="30" y="231" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">K3s <100MB</text>
+<text x="385" y="213" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Edge K8s</text>
+<text x="385" y="231" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">MicroShift</text>
+<rect x="20" y="227" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="246" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Licensing</text>
+<text x="30" y="264" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Per-cluster</text>
+<text x="385" y="246" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Licensing</text>
+<text x="385" y="264" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">Per-core</text>
+<text x="30" y="279" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">GitOps</text>
+<text x="30" y="297" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Fleet (native)</text>
+<text x="385" y="279" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">GitOps</text>
+<text x="385" y="297" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">ArgoCD (add-on)</text>
+<rect x="20" y="293" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="312" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Vendor Lock-in</text>
+<text x="30" y="330" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Zero (any K8s)</text>
+<text x="385" y="312" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Vendor Lock-in</text>
+<text x="385" y="330" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">OpenShift-only</text>
+<rect x="20" y="326" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="345" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">SAP Certification</text>
+<text x="30" y="363" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Rancher for SAP</text>
+<text x="385" y="345" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">SAP Certification</text>
+<text x="385" y="363" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">Limited</text>
+<rect x="20" y="359" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="378" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Supply Chain</text>
+<text x="30" y="396" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">SLSA L3 + SBOM</text>
+<text x="385" y="378" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Supply Chain</text>
+<text x="385" y="396" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">SLSA L2</text>
+<rect x="20" y="392" width="355" height="28" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="411" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Price Trend</text>
+<text x="30" y="429" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Predictable</text>
+<text x="385" y="411" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Price Trend</text>
+<text x="385" y="429" text-anchor="start" fill="#ef5350" font-family="sans-serif" font-size="10">Escalating</text>
+<text x="375" y="470" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">SUSE: choice, openness, and security without lock-in</text>
+</svg>

@@ -1,0 +1,81 @@
+/* ===========================================
+   Move navigation sidebar from left to right
+   =========================================== */
+
+/* Swap the grid positions: nav goes right, content shifts left */
+.md-grid {
+  max-width: 64rem;
+}
+
+/* On screens wide enough for the 3-column layout */
+@media screen and (min-width: 76.25em) {
+  /* Move navigation (primary sidebar) to the right */
+  .md-sidebar--primary {
+    order: 2;
+    right: 0;
+    left: auto;
+    margin-left: 1.6rem;
+  }
+
+  /* Keep TOC (secondary sidebar) on the left */
+  .md-sidebar--secondary {
+    order: 0;
+    left: 0;
+    right: auto;
+  }
+
+  /* Adjust the main content grid */
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    overflow: hidden;
+  }
+
+  /* Hide the TOC sidebar since we now have nav on the right */
+  /* Actually, let's keep TOC available for deep page navigation */
+  .md-sidebar--secondary {
+    display: none; /* Hide TOC - the right nav replaces its function */
+  }
+}
+
+/* Make the navigation labels more readable */
+.md-nav--primary .md-nav__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.6rem;
+}
+
+.md-nav--primary .md-nav__link {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.15s ease;
+}
+
+.md-nav--primary .md-nav__link:hover {
+  background-color: var(--md-default-fg-color--lighter);
+}
+
+/* Smaller screens: keep standard behavior */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar--primary {
+    order: 0;
+    left: -12.1rem;
+    right: auto;
+  }
+  .md-sidebar--primary.md-sidebar--open {
+    left: 0;
+  }
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}

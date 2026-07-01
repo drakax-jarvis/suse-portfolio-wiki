@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#009688"/>
+      <stop offset="100%" stop-color="#00695c"/>
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7043"/>
+      <stop offset="100%" stop-color="#d84315"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#bg-grad)" rx="8"/>
+<text x="350" y="35" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="20" font-weight="bold">Longhorn — Cloud-Native Storage for Kubernetes (CNCF Graduated)</text>
+<rect x="250" y="60" width="200" height="40" rx="6" fill="#00695c" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350" y="85" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Longhorn Manager + CSI Driver</text>
+<text x="350" y="130" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="11">Each volume gets a dedicated controller + N synchronous replicas</text>
+<rect x="30" y="145" width="200" height="130" rx="6" fill="#16213e" stroke="#546e7a" stroke-width="1" filter="url(#shadow)"/>
+<text x="130" y="165" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Node 1</text>
+<rect x="40" y="178" width="180" height="35" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="130" y="200" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">⚙ Volume-A Controller</text>
+<rect x="40" y="223" width="180" height="35" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="130" y="245" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">📦 Volume-B Replica 3</text>
+<rect x="250" y="145" width="200" height="130" rx="6" fill="#16213e" stroke="#546e7a" stroke-width="1" filter="url(#shadow)"/>
+<text x="350" y="165" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Node 2</text>
+<rect x="260" y="178" width="180" height="35" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="350" y="200" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">📦 Volume-A Replica 1</text>
+<rect x="260" y="223" width="180" height="35" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="350" y="245" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">⚙ Volume-B Controller</text>
+<rect x="470" y="145" width="200" height="130" rx="6" fill="#16213e" stroke="#546e7a" stroke-width="1" filter="url(#shadow)"/>
+<text x="570" y="165" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Node 3</text>
+<rect x="480" y="178" width="180" height="35" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="570" y="200" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">📦 Volume-A Replica 2</text>
+<rect x="480" y="223" width="180" height="35" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="570" y="245" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10">📦 Volume-B Replica 1</text>
+<rect x="30" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="72" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Snapshots</text>
+<rect x="123" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="165" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Backups (S3/NFS)</text>
+<rect x="216" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="258" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">DR Volumes</text>
+<rect x="309" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="351" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">RWX Support</text>
+<rect x="402" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="444" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Encryption</text>
+<rect x="495" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="537" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Monitoring</text>
+<rect x="588" y="300" width="85" height="30" rx="4" fill="#16213e" stroke="#009688" stroke-width="1"/>
+<text x="630" y="319" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">V2 (SPDK)</text>
+<text x="350" y="365" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="11">Use cases: Stateful workloads (DBs, queues) · Harvester storage backend · Edge storage</text>
+</svg>

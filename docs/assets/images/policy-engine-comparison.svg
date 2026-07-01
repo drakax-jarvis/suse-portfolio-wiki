@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" width="750" height="420">
+<defs><filter id="s" x="-5%" y="-5%" width="115%" height="115%">
+<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d1117"/></linearGradient></defs>
+<rect width="750" height="420" fill="url(#bg)" rx="8"/>
+<text x="375.0" y="30" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="18" font-weight="bold">Policy Engine Comparison</text><rect x="30" y="50" width="140" height="32" rx="5" fill="#16213e" stroke="#90a4ae" stroke-width="1.5" filter="url(#s)"/>
+<text x="100" y="71" text-anchor="middle" fill="#90a4ae" font-family="sans-serif" font-size="12" font-weight="bold">Feature</text>
+<rect x="180" y="50" width="140" height="32" rx="5" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#s)"/>
+<text x="250" y="71" text-anchor="middle" fill="#009688" font-family="sans-serif" font-size="12" font-weight="bold">Kubewarden</text>
+<rect x="370" y="50" width="140" height="32" rx="5" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#s)"/>
+<text x="440" y="71" text-anchor="middle" fill="#ff7043" font-family="sans-serif" font-size="12" font-weight="bold">OPA/Gatekeeper</text>
+<rect x="560" y="50" width="140" height="32" rx="5" fill="#16213e" stroke="#42a5f5" stroke-width="1.5" filter="url(#s)"/>
+<text x="630" y="71" text-anchor="middle" fill="#42a5f5" font-family="sans-serif" font-size="12" font-weight="bold">Kyverno</text>
+<rect x="16" y="95" width="718" height="26" rx="5" fill="#16213e" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="112" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">CNCF Status</text>
+<text x="190" y="112" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Sandbox</text>
+<text x="380" y="112" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Graduated</text>
+<text x="570" y="112" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">Not CNCF</text>
+<rect x="16" y="125" width="718" height="26" rx="5" fill="#1e2a3a" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="142" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Policy language</text>
+<text x="190" y="142" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Any → WASM</text>
+<text x="380" y="142" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Rego (DSL)</text>
+<text x="570" y="142" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">YAML patterns</text>
+<rect x="16" y="155" width="718" height="26" rx="5" fill="#16213e" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="172" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Execution sandbox</text>
+<text x="190" y="172" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">WASM (isolated)</text>
+<text x="380" y="172" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Shared process</text>
+<text x="570" y="172" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">Shared process</text>
+<rect x="16" y="185" width="718" height="26" rx="5" fill="#1e2a3a" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="202" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Distribution</text>
+<text x="190" y="202" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">OCI Registry</text>
+<text x="380" y="202" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">OPA Bundles</text>
+<text x="570" y="202" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">ConfigMaps / YAML</text>
+<rect x="16" y="215" width="718" height="26" rx="5" fill="#16213e" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="232" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Languages</text>
+<text x="190" y="232" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Rust, Go, CEL, Rego, JS</text>
+<text x="380" y="232" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Rego only</text>
+<text x="570" y="232" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">YAML only</text>
+<rect x="16" y="245" width="718" height="26" rx="5" fill="#1e2a3a" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<rect x="180" y="245" width="190" height="26" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="262" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Mutation support</text>
+<text x="190" y="262" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Yes</text>
+<text x="380" y="262" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Limited</text>
+<text x="570" y="262" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">Rich</text>
+<rect x="16" y="275" width="718" height="26" rx="5" fill="#16213e" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="292" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Audit mode</text>
+<text x="190" y="292" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Yes</text>
+<text x="380" y="292" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Yes</text>
+<text x="570" y="292" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">Yes</text>
+<rect x="16" y="305" width="718" height="26" rx="5" fill="#1e2a3a" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="322" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Rancher UI</text>
+<text x="190" y="322" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Built-in</text>
+<text x="380" y="322" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Manual</text>
+<text x="570" y="322" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">Manual</text>
+<rect x="16" y="335" width="718" height="26" rx="5" fill="#16213e" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="352" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">Non-K8s validation</text>
+<text x="190" y="352" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Raw policies</text>
+<text x="380" y="352" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">Yes</text>
+<text x="570" y="352" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">No</text>
+<rect x="16" y="365" width="718" height="26" rx="5" fill="#1e2a3a" stroke="#37474f" stroke-width="1.5" filter="url(#s)"/>
+<rect x="180" y="365" width="190" height="26" rx="5" fill="rgba(0,150,136,0.12)" stroke="#00695c" stroke-width="1.5" filter="url(#s)"/>
+<text x="30" y="382" text-anchor="start" fill="#90a4ae" font-family="sans-serif" font-size="10">SBOM scanning</text>
+<text x="190" y="382" text-anchor="start" fill="#26a69a" font-family="sans-serif" font-size="10">Yes (1.36+)</text>
+<text x="380" y="382" text-anchor="start" fill="#ff7043" font-family="sans-serif" font-size="10">No</text>
+<text x="570" y="382" text-anchor="start" fill="#42a5f5" font-family="sans-serif" font-size="10">No</text>
+<text x="375" y="410" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10" font-weight="normal">Kubewarden: any language, WASM sandbox, OCI distribution. No new DSL to learn.</text>
+</svg>

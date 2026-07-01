@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#009688"/>
+      <stop offset="100%" stop-color="#00695c"/>
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7043"/>
+      <stop offset="100%" stop-color="#d84315"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="480" fill="url(#bg-grad)" rx="8"/>
+<text x="350" y="35" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="20" font-weight="bold">SUSE Edge — Purpose-Built for Distributed Environments</text>
+<rect x="40" y="60" width="200" height="45" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="140" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">SUSE Edge</text>
+<text x="140" y="93" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">General purpose edge</text>
+<rect x="260" y="60" width="200" height="45" rx="6" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="360" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Industrial Edge</text>
+<text x="360" y="93" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">Manufacturing · Factory</text>
+<rect x="480" y="60" width="200" height="45" rx="6" fill="#16213e" stroke="#42a5f5" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="580" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Telco Cloud Edge</text>
+<text x="580" y="93" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">5G · Telecom</text>
+<rect x="150" y="130" width="400" height="40" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="155.0" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12">Rancher Prime — Centralized Management</text>
+<rect x="150" y="180" width="400" height="40" rx="6" fill="#16213e" stroke="#66bb6a" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="205.0" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12">K3s — Lightweight Kubernetes (<100MB)</text>
+<rect x="150" y="230" width="400" height="40" rx="6" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="255.0" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12">NeuVector — Container Security at Edge</text>
+<rect x="150" y="280" width="400" height="40" rx="6" fill="#16213e" stroke="#42a5f5" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="305.0" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12">SUSE Linux Micro — Immutable OS</text>
+<rect x="150" y="330" width="400" height="40" rx="6" fill="#16213e" stroke="#ab47bc" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="355.0" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12">Elemental — OCI-based OS Lifecycle Mgmt</text>
+<line x1="350" y1="170" x2="350" y2="180" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="220" x2="350" y2="230" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="270" x2="350" y2="280" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="320" x2="350" y2="330" stroke="#009688" stroke-width="1.5"/>
+<text x="350" y="400" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="13" font-weight="bold">Use Cases</text>
+<rect x="40" y="412" width="145" height="35" rx="4" fill="#16213e" stroke="#26a69a" stroke-width="1"/>
+<text x="112" y="428" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10" font-weight="bold">Smart Factory</text>
+<text x="112" y="440" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Industrial IoT</text>
+<rect x="205" y="412" width="145" height="35" rx="4" fill="#16213e" stroke="#26a69a" stroke-width="1"/>
+<text x="277" y="428" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10" font-weight="bold">5G / Telco</text>
+<text x="277" y="440" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">DPDK, SR-IOV</text>
+<rect x="370" y="412" width="145" height="35" rx="4" fill="#16213e" stroke="#26a69a" stroke-width="1"/>
+<text x="442" y="428" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10" font-weight="bold">Retail Edge</text>
+<text x="442" y="440" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">POS, Inventory</text>
+<rect x="535" y="412" width="145" height="35" rx="4" fill="#16213e" stroke="#26a69a" stroke-width="1"/>
+<text x="607" y="428" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="10" font-weight="bold">Remote Ops</text>
+<text x="607" y="440" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Oil & Gas, Mining</text>
+</svg>

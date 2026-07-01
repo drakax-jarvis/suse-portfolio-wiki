@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 480" width="750" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#009688"/>
+      <stop offset="100%" stop-color="#00695c"/>
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7043"/>
+      <stop offset="100%" stop-color="#d84315"/>
+    </linearGradient>
+  </defs>
+  <rect width="750" height="480" fill="url(#bg-grad)" rx="8"/>
+<text x="375" y="35" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="20" font-weight="bold">NeuVector — The Only K8s-Native Container Security Platform</text>
+<rect x="30" y="60" width="160" height="50" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="110" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Manager</text>
+<text x="110" y="96" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">Web UI · HTTPS</text>
+<rect x="210" y="60" width="160" height="50" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="290" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Controller ×3</text>
+<text x="290" y="96" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">HA Raft Cluster · REST API</text>
+<rect x="390" y="60" width="160" height="50" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="470" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Scanner</text>
+<text x="470" y="96" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">CVE DB · Parallel scans</text>
+<rect x="570" y="60" width="160" height="50" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="650" y="78" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Updater</text>
+<text x="650" y="96" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">CVE DB updates</text>
+<line x1="375" y1="110" x2="375" y2="145" stroke="#009688" stroke-width="1.5"/>
+<rect x="175" y="150" width="400" height="40" rx="6" fill="#00695c" stroke="#009688" stroke-width="2" filter="url(#shadow)"/>
+<text x="375" y="175" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="13" font-weight="bold">Enforcer (DaemonSet — one per node)</text>
+<line x1="375" y1="190" x2="375" y2="215" stroke="#009688" stroke-width="1.5"/>
+<text x="375" y="240" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="14" font-weight="bold">Five Pillars of Container Security</text>
+<rect x="20" y="255" width="130" height="100" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="85" y="278" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">CI/CD Scanning</text>
+<text x="85" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Admission Control</text>
+<text x="85" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Jenkins plugin</text>
+<text x="85" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Registry scan</text>
+<rect x="165" y="255" width="130" height="100" rx="6" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="230" y="278" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Runtime Protection</text>
+<text x="230" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Zero-trust whitelist</text>
+<text x="230" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Behavior learning</text>
+<text x="230" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Container quarantine</text>
+<rect x="310" y="255" width="130" height="100" rx="6" fill="#16213e" stroke="#ef5350" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="375" y="278" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Threat Detection</text>
+<text x="375" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">DDoS · DNS attacks</text>
+<text x="375" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">DLP (data loss)</text>
+<text x="375" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">WAF (OWASP Top 10)</text>
+<rect x="455" y="255" width="130" height="100" rx="6" fill="#16213e" stroke="#42a5f5" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="520" y="278" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Compliance</text>
+<text x="520" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">CIS Benchmarks</text>
+<text x="520" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Docker Bench</text>
+<text x="520" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">PCI-DSS · SOX</text>
+<rect x="600" y="255" width="130" height="100" rx="6" fill="#16213e" stroke="#ab47bc" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="665" y="278" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="11" font-weight="bold">Host Security</text>
+<text x="665" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Privilege escalation</text>
+<text x="665" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">Process monitoring</text>
+<text x="665" y="296+j*16" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="9">File integrity</text>
+<text x="375" y="385" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="11">Multi-cluster management · LDAP/AD/SAML/SSO · Syslog/Webhook export · Packet capture</text>
+<text x="375" y="405" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="11">Rancher Prime integration · Fleet-managed deployment · Open source (5.x) available</text>
+</svg>

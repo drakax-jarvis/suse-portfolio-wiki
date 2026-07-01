@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#009688"/>
+      <stop offset="100%" stop-color="#00695c"/>
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7043"/>
+      <stop offset="100%" stop-color="#d84315"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="480" fill="url(#bg-grad)" rx="8"/>
+<text x="350" y="35" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="20" font-weight="bold">Harvester — Modern, Open, Hyperconverged Infrastructure</text>
+<rect x="150" y="60" width="400" height="45" rx="6" fill="#16213e" stroke="#009688" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="87.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Harvester UI / Rancher Integration</text>
+<rect x="150" y="115" width="400" height="65" rx="6" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="142.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Kubernetes (Orchestration Layer)</text>
+<text x="350.0" y="160.5" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">KubeVirt (VMs) · Longhorn (Storage) · Multus (Networking)</text>
+<rect x="150" y="190" width="400" height="45" rx="6" fill="#16213e" stroke="#66bb6a" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="217.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Elemental / SLE Micro (Immutable Linux)</text>
+<rect x="150" y="245" width="400" height="45" rx="6" fill="#16213e" stroke="#ab47bc" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350.0" y="272.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="12" font-weight="bold">Bare Metal Servers (x86)</text>
+<line x1="350" y1="105" x2="350" y2="115" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="180" x2="350" y2="190" stroke="#009688" stroke-width="1.5"/>
+<line x1="350" y1="235" x2="350" y2="245" stroke="#009688" stroke-width="1.5"/>
+<text x="590" y="60" fill="#78909c" font-family="sans-serif" font-size="11" font-weight="bold">Key Features</text>
+<rect x="560" y="75" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="91.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">VM Live Migration</text>
+<rect x="560" y="105" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="121.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Snapshots & Backup</text>
+<rect x="560" y="135" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="151.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">S3/NFS Backup Target</text>
+<rect x="560" y="165" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="181.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">VLAN Networking</text>
+<rect x="560" y="195" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="211.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">Maintenance Mode</text>
+<rect x="560" y="225" width="120" height="25" rx="4" fill="#16213e" stroke="#ff7043" stroke-width="1"/>
+<text x="620.0" y="241.5" text-anchor="middle" fill="#eceff1" font-family="sans-serif" font-size="9">CSI Storage</text>
+<rect x="150" y="310" width="400" height="75" rx="6" fill="#16213e" stroke="#ff7043" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350" y="335" text-anchor="middle" fill="#ff7043" font-family="sans-serif" font-size="13" font-weight="bold">VMware Off-Ramp Path</text>
+<text x="350" y="355" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">Phase 1: Co-exist → Phase 2: Expand → Phase 3: Modernize</text>
+<text x="350" y="372" text-anchor="middle" fill="#78909c" font-family="sans-serif" font-size="10">Local DAS storage · No SAN · Certified: Dell, NetApp, Oracle, Portworx</text>
+</svg>
